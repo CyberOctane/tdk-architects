@@ -46,6 +46,7 @@ p {
     background-color: transparent;
     height: 100px;
     border-color: transparent;
+    z-index: 1;
     -webkit-transition: all 0.35s;
     -moz-transition: all 0.35s;
     -o-transition: all 0.35s;
@@ -80,10 +81,67 @@ p {
 
 .navbar-default .navbar-nav>li>a:hover,
 .navbar-default .navbar-nav>li>a:focus:hover {
-    color: #f5d010 ;
+    color: #f5d010;
 }
 
-#fullpage .hero-section {
+.side-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    text-align: center;
+    background-color: #f5d010;
+    margin: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.side-nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.side-nav a:hover {
+    color: #fff;
+}
+
+.side-nav .side-nav-items {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+}
+
+.side-nav .side-nav-items ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-nav .side-nav-items a {
+    padding: 10px 10px 10px 10px;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    display: block;
+    transition: 0.3s;
+}
+
+.side-nav .side-nav-items a:hover {
+    color: #fff;
+    font-weight: 700;
+}
+
+.side-nav .btn-close {
+    position: absolute;
+    top: 35px;
+    right: 35px;
+    font-size: 45px;
+    font-weight: 300;
+}
+
+.fullpage .hero-section {
     position: relative;
     width: 100%;
     min-height: auto;
@@ -96,27 +154,30 @@ p {
     color: white;
 }
 
-#fullpage .hero-section .hero-description {
+.fullpage .hero-section .hero-description {
     position: absolute;
     bottom: 40px;
     padding-left: 15px;
 }
 
-#fullpage .hero-section .hero-description h2 {
+.fullpage .hero-section .hero-description h2 {
+    font-family: 'Roboto Condensed';
     font-weight: 700;
     font-size: 22px;
     margin: 0;
     padding: 0;
 }
 
-#fullpage .hero-section .hero-description h3 {
+.fullpage .hero-section .hero-description h3 {
+    font-family: 'Roboto Condensed';
     font-weight: 300;
     font-size: 22px;
     margin: 0;
     padding-bottom: 2px;
 }
 
-#fullpage .hero-section .hero-description a {
+.fullpage .hero-section .hero-description a {
+    font-family: 'Roboto Condensed';
     font-weight: 100;
     font-size: 18px;
     margin: 0;
@@ -124,7 +185,7 @@ p {
     text-decoration: none;
 }
 
-#fullpage .section h1 {
+.fullpage .section h1 {
     text-align: center;
     color: #ffffff;
     font-size: 10em;

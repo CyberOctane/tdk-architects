@@ -22,6 +22,7 @@
     <!-- Google Fonts API -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
 
     <!-- All Plugins CSS -->
     <!-- Fullpage.js CSS -->
@@ -37,55 +38,102 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script>
+        function openSlideMenu() {
+            document.getElementById('side-menu').style.width = '100%';
+        }
+
+        function closeSlideMenu() {
+            document.getElementById('side-menu').style.width = '0';
+        }
+    </script>
+
 </head>
 
 <body id="page-top">
+
+    <!-- NavBar Start -->
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-offset">
+                <!-- Nav Brand -->
                 <div class="navbar-header">
-                    <a class="navbar-brand page-scroll" href="#page-top">
-                        <img src="./img/logo/tdk_logo.png" alt="TDK">
+                    <a class="navbar-brand" href="#firstPage">
+                        <img src="./img/logo/tdk_logo.png" alt="TDK Logo">
                     </a>
                 </div>
+                <!-- Nav Brand End -->
 
+                <!-- Hamburger Menu -->
                 <div class="hamburger-menu" id="hamburger-menu">
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a class="page-scroll" href="#contact">
-                                <i class="fa fa-bars"></i>
+                            <a href="#" onclick="openSlideMenu()">
+                                <svg width="25" height="30">
+                                    <path d="M0,5 30,5" stroke="#fff" stroke-width="2" />
+                                    <path d="M0,12 30,12" stroke="#fff" stroke-width="2" />
+                                    <path d="M0,19 30,19" stroke="#fff" stroke-width="2" />
+                                </svg>
                             </a>
                         </li>
                     </ul>
                 </div>
+                <!-- Hamburger Menu End -->
             </div>
+            <!-- Navbar-Header End -->
         </div>
-        <!-- /.container -->
+        <!-- Container End -->
     </nav>
-    <div id="fullpage">
-        <div class="hero-section section" id="hero-section">
+    <!-- NavBar End -->
+
+    <!-- Side Menu Start -->
+    <div id="side-menu" class="side-nav">
+        <a class="btn-close" href="#" onclick="closeSlideMenu()">&times;</a>
+        <div class="side-nav-items">
+            <ul id="hamMenu">
+                <li data-menuanchor="firstPage">
+                    <a href="#firstPage">Home</a>
+                </li>
+                <li data-menuanchor="secondPage">
+                    <a href="#secondPage">About Us</a>
+                </li>
+                <li data-menuanchor="3rdPage">
+                    <a href="#3rdPage">Services</a>
+                </li>
+                <li data-menuanchor="4thPage">
+                    <a href="#4thPage">Portfolio</a>
+                </li>
+                <li data-menuanchor="5thPage">
+                    <a href="#5thPage">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Side Menu End -->
+
+    <div id="fullpage" class="fullpage">
+        <div id="hero-section" class="hero-section section">
             <div class="container">
                 <div class="hero-description text-left">
                     <h2 class="project-name">Bricksgate Apartment</h2>
                     <h3 class="location">Wattala</h3>
                     <hr>
-                    <a class="page-scroll" href="#contact">see more about this project</a>
+                    <a href="#contact">see more about this project</a>
                     <hr>
                 </div>
             </div>
         </div>
-        <div class="section" id="about-us">
-            <h1>Section 2</h1>
+        <div id="about-us" class="section">
+            <h1>About Us</h1>
         </div>
-        <div class="section" id="services">
-            <h1>Section 3</h1>
+        <div id="services" class="section">
+            <h1>Services</h1>
         </div>
-        <div class="section" id="projects">
-            <h1>Section 4</h1>
+        <div id="projects" class="section">
+            <h1>Portfolio</h1>
         </div>
-        <div class="section" id="contact-us">
-            <h1>Section 4</h1>
+        <div id="contact-us" class="section">
+            <h1>Contact Us</h1>
         </div>
     </div>
     <!--jQuery CDN-->
@@ -98,9 +146,12 @@
     <!-- Plugin JavaScript -->
     <!--Fullpage.js JS-->
     <script src="./vendor/fullpage.js/js/jquery.fullPage.js"></script>
+    <!--jQuery Easing-->
+    <script src="./vendor/jquery.easing/jquery.easing.js"></script>
 
     <!-- Theme JavaScript -->
     <script src="./js/fullpage.controller.js"></script>
+    <script src="./js/custom.js"></script>
 </body>
 
 </html>
