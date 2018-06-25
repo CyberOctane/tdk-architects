@@ -27,6 +27,11 @@
     <!-- All Plugins CSS -->
     <!-- Fullpage.js CSS -->
     <link rel="stylesheet" type="text/css" href="./vendor/fullpage.js/css/jquery.fullPage.css">
+    <!-- Animate.css CSS -->
+    <link rel="stylesheet" type="text/css" href="./vendor/animate.css/animate.css">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="./vendor/owl.carousel/css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="./vendor/owl.carousel/css/owl.theme.default.css">
 
     <!-- Theme CSS -->
     <link rel="stylesheet" type="text/css" href="./css/style.css">
@@ -37,16 +42,6 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-    <script>
-        function openSlideMenu() {
-            document.getElementById('side-menu').style.width = '100%';
-        }
-
-        function closeSlideMenu() {
-            document.getElementById('side-menu').style.width = '0';
-        }
-    </script>
 
 </head>
 
@@ -89,37 +84,63 @@
     <!-- Side Menu Start -->
     <div id="side-menu" class="side-nav">
         <a class="btn-close" href="#" onclick="closeSlideMenu()">&times;</a>
-        <div class="side-nav-items">
+        <div id="side-nav-items" class="side-nav-items">
             <ul id="hamMenu">
-                <li data-menuanchor="firstPage">
-                    <a href="#firstPage">Home</a>
+                <li id="side-nav-li-1" class="wow" data-wow-delay="0s" data-menuanchor="firstPage">
+                    <a href="#firstPage" onclick="closeSlideMenu()">Home</a>
                 </li>
-                <li data-menuanchor="secondPage">
-                    <a href="#secondPage">About Us</a>
+                <li id="side-nav-li-2" class="wow" data-wow-delay="0.1s" data-menuanchor="secondPage">
+                    <a href="#secondPage" onclick="closeSlideMenu()">About Us</a>
                 </li>
-                <li data-menuanchor="3rdPage">
-                    <a href="#3rdPage">Services</a>
+                <li id="side-nav-li-3" class="wow" data-wow-delay="0.2s" data-menuanchor="3rdPage">
+                    <a href="#3rdPage" onclick="closeSlideMenu()">Services</a>
                 </li>
-                <li data-menuanchor="4thPage">
-                    <a href="#4thPage">Portfolio</a>
+                <li id="side-nav-li-4" class="wow" data-wow-delay="0.3s" data-menuanchor="4thPage">
+                    <a href="#4thPage" onclick="closeSlideMenu()">Portfolio</a>
                 </li>
-                <li data-menuanchor="5thPage">
-                    <a href="#5thPage">Contact Us</a>
+                <li id="side-nav-li-5" class="wow" data-wow-delay="0.4s" data-menuanchor="5thPage">
+                    <a href="#5thPage" onclick="closeSlideMenu()">Contact Us</a>
                 </li>
             </ul>
         </div>
     </div>
     <!-- Side Menu End -->
 
-    <div id="fullpage" class="fullpage">
-        <div id="hero-section" class="hero-section section">
-            <div class="container">
-                <div class="hero-description text-left">
-                    <h2 class="project-name">Bricksgate Apartment</h2>
-                    <h3 class="location">Wattala</h3>
-                    <hr>
-                    <a href="#contact">see more about this project</a>
-                    <hr>
+    <div id="fullpage">
+        <div id="home" class="section">
+            <div class="hero owl-carousel owl-theme">
+                <div class="hero-section" id="hero-section-1">
+                    <div class="container">
+                        <div class="hero-section-inner wow fadeInRight" data-wow-delay="0.1s">
+                            <h2>Bricksgate Apartment</h2>
+                            <h3>Wattala</h3>
+                            <hr>
+                            <a href="#contact">see more about this project</a>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-section" id="hero-section-2">
+                    <div class="container">
+                        <div class="hero-section-inner wow fadeInRight" data-wow-delay="0.1s">
+                            <h2>Bricksgate Apartment</h2>
+                            <h3>Wattala</h3>
+                            <hr>
+                            <a href="#contact">see more about this project</a>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-section" id="hero-section-3">
+                    <div class="container">
+                        <div class="hero-section-inner wow fadeInRight" data-wow-delay="0.1s">
+                            <h2>Bricksgate Apartment</h2>
+                            <h3>Wattala</h3>
+                            <hr>
+                            <a href="#contact">see more about this project</a>
+                            <hr>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -136,22 +157,30 @@
             <h1>Contact Us</h1>
         </div>
     </div>
-    <!--jQuery CDN-->
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="./vendor/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <!--Fullpage.js JS-->
+    <!-- Fullpage.js -->
     <script src="./vendor/fullpage.js/js/jquery.fullPage.js"></script>
-    <!--jQuery Easing-->
+    <!-- jQuery Easing -->
     <script src="./vendor/jquery.easing/jquery.easing.js"></script>
+    <!-- wow.js -->
+    <script src="./vendor/wow.js/wow.js"></script>
+    <!-- Scroll Reveal -->
+    <script src="./vendor/scrollreveal/scrollreveal.min.js"></script>
+    <!-- Owl Carousel -->
+    <script src="./vendor/owl.carousel/js/owl.carousel.js"></script>
 
     <!-- Theme JavaScript -->
     <script src="./js/fullpage.controller.js"></script>
+    <script src="./js/script.js"></script>
     <script src="./js/custom.js"></script>
+    <script src="./js/scrollreveal.controller.js"></script>
 </body>
 
 </html>
