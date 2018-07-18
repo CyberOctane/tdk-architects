@@ -49,3 +49,11 @@ function closeSlideMenu() {
 function sideMenuWidthReset() {
     document.getElementById('side-menu').style.width = '0%';
 }
+
+/*function carouselWowAnimation() {
+    if (document.getElementById('1').classList.contains(animated)) {
+        document.getElementById('1').classList.add('fadeInRight');
+    } else {
+        document.getElementById('1').classList.add('animated');
+    }
+}*/
