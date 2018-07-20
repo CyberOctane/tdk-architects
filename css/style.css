@@ -190,6 +190,7 @@ hr {
     width: 100%;
     padding: 0;
 }
+
 @media (min-width:767.98px){
     .container{
         width: 80%;
