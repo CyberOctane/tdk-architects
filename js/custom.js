@@ -20,6 +20,25 @@
             dots: false
         });
     });
+    
+    /*----- Clients Section -----*/
+    $(document).ready(function () {
+        $("#clients").owlCarousel({
+            
+            loop: true,
+            singleItem: true,
+            autoplay: true,
+            autoHeight: true,
+            autoplayTimeout: 3000,
+            smartSpeed: 1000,
+            autoplayHoverPause: false,
+            dots: false,
+            responsive:{
+                0:{items:2},
+                1200:{items:3}
+            }
+        });
+    });
 
     var mainbottom = $('#about-us').offset().top;
 

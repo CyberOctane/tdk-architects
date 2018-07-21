@@ -183,22 +183,25 @@ hr {
 
 .blkhr {
     border-color: rgb(0, 0, 0);
-    border-width: 3px;
+    border-width: 0.1vw;
+    margin: 0;
 }
 
 .container {
     width: 100%;
     padding: 0;
+    overflow: hidden;
 }
 @media (min-width:767.98px){
     .container{
-        width: 80%;
+        width: 90%;
     }
 }
 
 .imgbox {
     overflow: hidden;
     padding: 0;
+    margin: 0;
 }
 
 .imgbox img {
@@ -444,7 +447,86 @@ body {
 /*------ 5. About Us Styling ------*/
 
 #about {
-    height: 75vh;
+    height: 40vh;
+}
+@media (min-width:1200px){
+    #about{
+        height: 40vw;
+    }
+}
+
+.lgonly {
+    display: none;
+}
+@media (min-width:1200px){
+    .lgonly{
+        display: block;
+    }
+}
+
+.textbox {
+    height: 24.6vw;
+    padding: 1vw 0;
+    position: relative;
+    overflow-y : scroll;
+}
+
+#us-phrase-div {
+    height: 5vw
+}
+
+#us-phrase {
+    font-size: 2vw;
+    line-height: 2.2vw;
+}
+
+/* carousel */
+#clients {
+    height: 20vw;
+    padding: 1vw;
+    background-color: yellow;
+}
+@media (min-width:1200px){
+    #clients {
+        height: 10vw;
+        padding: 1vw;
+    }
+} 
+
+.logos {
+    width: 100%;
+    height: 18vw;
+    background-color: blue;
+    padding: 0 0;
+    overflow: hidden;
+    float: left;
+}
+@media (min-width:1200px){
+    .logos {
+        height: 8vw;
+        width: 100%;
+        padding: 0 8%;
+        overflow: hidden;
+        float: left;
+        background-color: blue;
+    }
+}
+
+.cl-logo {
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+    float: left;
+    background-color: bisque;
+}
+@media (min-width:1200px){
+    .cl-logo {
+        height: 50%;
+        width: 100%;
+        overflow: hidden;
+        float: left;
+    }
+
 }
 
 /*------ 6. Services Styling ------*/
@@ -452,39 +534,9 @@ body {
 .services {
     height: 33.33vh;
 }
-@media (min-width:767.98px) {
-    .services {
-        height: 80vh;
-    }
-}
 
 .services img {
     filter: grayscale(100%)
-}
-
-.hovexp {
-    width: 100%;
-    height: inherit;
-    position: absolute;
-    z-index: 2;
-}
-
-.hovexp h1 {
-    position: relative;
-    font-family: source sans pro black;
-    font-size: 400%;
-    
-}
-
-.hovexp h2 {
-    font-family: source sans pro black;
-    color: white;
-    margin: 5% 0
-}
-
-.hovexp p {
-    color: white;
-    line-height: 1rem;
 }
 
 .overlay {
@@ -497,24 +549,134 @@ body {
     mix-blend-mode: multiply;
 }
 
-.topspace {
-    height: 40%;
+.hovexp {
     width: 100%;
-    position: relative;
-    transform-origin: top;
-    overflow: hidden;
-    transition: 0.5s ease;
+    height: inherit;
+    padding: 0 15%;
+    position: absolute;
+    z-index: 2;
 }
-.hovexp:hover .topspace{height: 30%}
+
+.servicestitle {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    padding: 11.5vh 0%;
+    float: left;
+}
+
+.servicestitle h1 {
+    font-family: source sans pro black;
+    font-size: 6vw;
+    line-height: 90%;
+    text-align: left;
+    float: left;
+}
 
 .expnd {
-    overflow: hidden;
-    height: 0;
-    padding: 0 15%;
-    transition: 0.5s ease;
-    transform-origin: bottom;
+    position: relative;
+    height: 100%;
+    width: 50%;
+    padding: 4.5vh 0;
+    float: left
 }
-.hovexp:hover .expnd{height: 40%}
+
+.servicedetails {
+    width:100%;
+    padding: 0.4vh 0%;
+    float: left;
+}
+
+.hovexp h2 {
+    font-family: roboto condensed ;
+    font-weight: 700;
+    color: white;
+    margin: 3% 0;
+    font-size: 100%;
+    float: left
+}
+
+.hovexp p { display: none}
+
+.topspace {
+    height: 0%;
+    width: 50%; 
+}
+
+/* Services section for desktop */
+@media (min-width:1200px){
+    
+    .services {
+        height: 80vh;
+    }
+
+    .expnd {
+        width: 100%;
+        padding: 0;
+        float: left
+    }
+
+    .servicestitle {
+        height: 8vw;
+        width: 100%;
+        padding: 0% 0%;
+        float: none;
+        background-color: aquamarine;
+    }
+
+    .servicestitle h1 {
+        font-family: source sans pro black;
+        font-size: 4vw;
+        line-height: 90%;
+        text-align: center;
+        float: none
+    }
+    .hovexp:hover h1{
+        text-align: left;
+    }
+
+    .servicedetails {
+        width: 50%;
+        float: left;
+    }
+
+    .hovexp h2 {
+        font-family: roboto condensed ;
+        font-weight: 700;
+        color: white;
+        margin: 3% 0;
+        font-size: 120%;
+        float: none;
+    }
+
+    .hovexp p {
+        font-family: source sans pro;
+        color: white;
+        line-height: 1rem;
+        display: block;
+    }
+
+    .sevicedetails {
+        padding-top: 10%;
+    }
+
+    .topspace {
+        height: 40%;
+        width: 100%;
+        position: relative;
+        transition: 0.4s ease;
+    }
+    .hovexp:hover .topspace{height: 30%}
+
+    .expnd {
+        overflow: hidden;
+        height: 0;
+        transition: 0.4s ease;
+        transform-origin: bottom;
+    }
+    .hovexp:hover .expnd{height: 50%}
+}    
+
 
 /*------ 7. Contact-Us Styling ------*/
 
