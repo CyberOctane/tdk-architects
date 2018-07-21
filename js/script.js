@@ -50,6 +50,21 @@ function sideMenuWidthReset() {
     document.getElementById('side-menu').style.width = '0%';
 }
 
+window.onresize = function (event) {
+    applyOrientation();
+}
+
+function applyOrientation() {
+    if (window.innerHeight > window.innerWidth) {
+        // alert("You are now in portrait");
+        document.getElementById('map-container').classList.remove('col-xs-9');
+        document.getElementById('info-container').classList.remove('col-xs-3');
+    } else {
+        // alert("You are now in landscape");
+        document.getElementById('map-container').classList.add('col-xs-9');
+        document.getElementById('info-container').classList.add('col-xs-3');
+    }
+}
 /*function carouselWowAnimation() {
     if (document.getElementById('1').classList.contains(animated)) {
         document.getElementById('1').classList.add('fadeInRight');
