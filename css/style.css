@@ -455,16 +455,9 @@ body {
 #about {
     height: 40vh;
 }
-<<<<<<< HEAD
 @media (min-width:1200px){
     #about{
         height: 80vh;
-=======
-
-@media (min-width:1200px) {
-    #about {
-        height: 40vw;
->>>>>>> 9fc4426d1f28ab01ac0923db526cc13c8d47746d
     }
 }
 
@@ -557,11 +550,8 @@ body {
     
 }
 
-<<<<<<< HEAD
-=======
 /* carousel */
 
->>>>>>> 9fc4426d1f28ab01ac0923db526cc13c8d47746d
 #clients {
     height: 10vh;
     padding: 1vw;
@@ -599,24 +589,18 @@ body {
     float: left;
 }
 
-<<<<<<< HEAD
-@media (min-width:1200px){
-=======
 @media (min-width:1200px) {
->>>>>>> 9fc4426d1f28ab01ac0923db526cc13c8d47746d
     .cl-logo {
         height: 50%;
         width: 100%;
         overflow: hidden;
         float: left;
     }
-<<<<<<< HEAD
     .cl-logo img {
         display: block;
         padding: 2vh 0;
     } 
-=======
->>>>>>> 9fc4426d1f28ab01ac0923db526cc13c8d47746d
+
 }
 
 /*------ 6. Services Styling ------*/
