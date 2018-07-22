@@ -258,6 +258,11 @@ body {
     transition: all 0.35s;
 }
 
+.navbar-default.past-main {
+    background-color: rgba(255, 255, 255, 0.95);
+    height: 75px;
+}
+
 .navbar-default.past-main .navbar-offset {
     margin-top: 10px;
 }
@@ -280,9 +285,14 @@ body {
 
 .navbar-default.past-main .navbar-offset .navbar-header .navbar-brand {
     background: url(../img/logo/tdk_logo_black.png);
-    -ms-transform: scale(0.5);
+    /* -ms-transform: scale(0.5);
     -webkit-transform: scale(0.5);
-    transform: scale(0.5);
+    transform: scale(0.5); */
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%) scale(0.5);
+    -webkit-transform: translateY(-50%) scale(0.5);
+    transform: translateY(-50%) scale(0.5);
     background-repeat: no-repeat;
 }
 
@@ -292,15 +302,28 @@ body {
     /*float: right;*/
 }
 
+.navbar-default .navbar-offset .hamburger-menu a {
+    padding-top: 0;
+    cursor: pointer;
+}
+
 .navbar-default .navbar-offset .hamburger-menu svg {
     stroke: #ffffff;
+    -webkit-transition: all 0.35s;
+    -moz-transition: all 0.35s;
+    -o-transition: all 0.35s;
+    transition: all 0.35s;
+}
+
+.navbar-default .navbar-offset .hamburger-menu svg:hover {
+    stroke: #f5d010;
 }
 
 .navbar-default.past-main .navbar-offset .hamburger-menu svg {
     stroke: #000000;
 }
 
-.navbar-default .navbar-nav>li>a,
+/* .navbar-default .navbar-nav>li>a,
 .navbar-default .navbar-nav>li>a:focus {
     color: #ffffff;
     font-size: 25px;
@@ -308,7 +331,16 @@ body {
 
 .navbar-default .navbar-nav>li>a:hover,
 .navbar-default .navbar-nav>li>a:focus:hover {
-    color: #f5d010;
+    stroke: #f5d010;
+} */
+
+/* ----------- Desktops and laptops ----------- */
+
+@media only screen and (min-width: 1224px) {
+    .navbar-default .navbar-offset .hamburger-menu a {
+        padding-top: 5px;
+        cursor: pointer;
+    }
 }
 
 /*------ 3. Side-nav Styling ------*/
@@ -377,6 +409,23 @@ body {
     right: 32px;
     font-size: 45px;
     font-weight: 300;
+    cursor: pointer;
+}
+
+/* ----------- Desktops and laptops ----------- */
+
+@media only screen and (min-width: 1224px) {
+    .side-nav .side-nav-items a,
+    .side-nav .side-nav-items a:focus {
+        padding: 10px 10px 10px 10px;
+        font-size: 45px;
+    }
+    .side-nav .btn-close {
+        top: 30px;
+        right: 75px;
+        font-size: 55px;
+        cursor: pointer;
+    }
 }
 
 /*------ 4. Hero-Section Styling ------*/
