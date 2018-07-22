@@ -2,7 +2,7 @@ $(document).ready(function () {
     $('#fullpage').fullpage({
         menu: '#hamMenu',
         anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage'],
-        sectionsColor: ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF'],
+        sectionsColor: ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FAB700', '#FFFFFF'],
         navigation: true,
         navigationTooltips: ['Home', 'About Us', 'Services', 'Portfolio', 'Contact Us'],
         responsiveHeight: 500,
