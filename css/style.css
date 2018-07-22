@@ -504,11 +504,39 @@ body {
 #about {
     height: 40vh;
 }
-
-@media (min-width:1200px) {
-    #about {
-        height: 40vw;
+@media (min-width:1200px){
+    #about{
+        height: 80vh;
     }
+}
+
+.White-overlay {
+    background-color: white;
+    height: inherit;
+    width: 50%;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    opacity: 0.8;
+    padding: 7vw 5vw;
+}
+
+.White-overlay h1 {
+    font-family: source sans pro black;
+    font-size: 4vw;
+    text-align: left;
+    color: black;
+}
+
+.White-overlay button {
+    font-family: roboto condensed; 
+    font-weight: 700;
+    font-size: 1.1vw;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    right: 3.5vw;
+    bottom: 6vw;
 }
 
 .lgonly {
@@ -522,32 +550,65 @@ body {
 }
 
 .textbox {
-    height: 24.6vw;
+    height: 40vh;
     padding: 1vw 0;
     position: relative;
     overflow-y: scroll;
 }
+@media (min-width:1200px) {
+    .textbox {
+        height: 45vh;
+        padding: 2vh 0;
+        position: relative;
+        overflow-y : hidden;
+    }
+}
+
+.bodytext {
+    font-family: source sans pro;
+    text-indent: 7%;
+}
 
 #us-phrase-div {
-    height: 5vw
+    height: 7vh
 }
 
 #us-phrase {
-    font-size: 2vw;
-    line-height: 2.2vw;
+    font-size: 3vh;
+    line-height: 1.6vw;
+}
+
+/*---carousel---*/
+/* carousel Logos */
+
+#logo-1 {
+    background-image: url(img/logo/clients/kemerada.jpg);
+}
+#logo-2 {
+    
+}
+#logo3 {
+}
+#logo-4 {
+    
+}
+#logo-5 {
+    
+}
+#logo-6 {
+    
 }
 
 /* carousel */
 
 #clients {
-    height: 20vw;
+    height: 10vh;
     padding: 1vw;
-    background-color: yellow;
 }
 
 @media (min-width:1200px) {
     #clients {
-        height: 10vw;
+        height: 14vw;
         padding: 1vw;
     }
 }
@@ -555,7 +616,6 @@ body {
 .logos {
     width: 100%;
     height: 18vw;
-    background-color: blue;
     padding: 0 0;
     overflow: hidden;
     float: left;
@@ -563,12 +623,11 @@ body {
 
 @media (min-width:1200px) {
     .logos {
-        height: 8vw;
+        height: 12vw;
         width: 100%;
         padding: 0 8%;
         overflow: hidden;
         float: left;
-        background-color: blue;
     }
 }
 
@@ -577,7 +636,6 @@ body {
     width: 50%;
     overflow: hidden;
     float: left;
-    background-color: bisque;
 }
 
 @media (min-width:1200px) {
@@ -587,6 +645,11 @@ body {
         overflow: hidden;
         float: left;
     }
+    .cl-logo img {
+        display: block;
+        padding: 2vh 0;
+    } 
+
 }
 
 /*------ 6. Services Styling ------*/
@@ -681,7 +744,6 @@ body {
         width: 100%;
         padding: 0% 0%;
         float: none;
-        background-color: aquamarine;
     }
     .servicestitle h1 {
         font-family: source sans pro black;
