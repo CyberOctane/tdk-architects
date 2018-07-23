@@ -14,10 +14,13 @@
             singleItem: true,
             autoplay: true,
             autoHeight: true,
-            autoplayTimeout: 3000,
+            animateOut: 'fadeOut',
+            autoplayTimeout: 6000,
             smartSpeed: 1000,
             autoplayHoverPause: false,
-            dots: false
+            dots: false,
+            mouseDrag: false,
+            touchDrag: false
         });
     });
     
