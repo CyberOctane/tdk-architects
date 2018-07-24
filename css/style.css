@@ -963,13 +963,21 @@ body {
     line-height: 0.9;
 }
 
+#contact-us p {
+    font-family: 'Roboto Condensed';
+    color: #000000;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
 .location {
     position: relative;
 }
 
 .locate-us {
     padding-top: 4.5vh;
-    float: left;
+    /* float: left; */
     padding-left: 4vh;
 }
 
@@ -1019,7 +1027,7 @@ body {
     color: #f5d010;
 }
 
-/* ----- For Mobile Devices ----- */
+/* ----------- For Mobile Devices ----------- */
 
 @media (max-width:768px) {
     .hr-top {
@@ -1028,6 +1036,68 @@ body {
     #info-container {
         margin-left: 15px;
         margin-right: 15px;
+    }
+    #contact-us hr {
+        border-width: 2px;
+        margin: 0;
+    }
+}
+
+/* ----------- Smartphones (landscape) ----------- */
+
+@media only screen and (min-width: 360px) and (orientation: landscape) {
+    #map {
+        height: 70vh;
+    }
+    #contact-us hr {
+        border-width: 2px;
+        /* margin: 0; */
+    }
+    #contact-us h1 {
+        font-size: 20px;
+    }
+    #contact-us p {
+        font-size: 12px;
+    }
+    #info-container {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .hr-top {
+        display: block;
+    }
+    .locate-us {
+        padding-top: 2vh;
+        padding-left: 0;
+    }
+    .address {
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        float: left;
+        margin-right: 0vh;
+    }
+    .get-in-touch {
+        padding-top: 2vh;
+        float: left;
+        margin-right: 0vh;
+    }
+    .contact-social {
+        padding-top: 1vh;
+        float: left;
+        text-align: left;
+    }
+    .social-media-icons {
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+    }
+    .social-media-icons a,
+    .social-media-icons a:focus {
+        font-size: 20px;
+        padding-right: 30px;
+        text-decoration: none;
+    }
+    #contact-us .footer p {
+        padding-top: 4vh;
     }
 }
 
@@ -1085,9 +1155,7 @@ body {
     .social-media-icons a,
     .social-media-icons a:focus {
         font-size: 35px;
-        color: #000000;
         padding-right: 40px;
-        text-decoration: none;
     }
     #contact-us .footer p {
         font-size: 12px;
