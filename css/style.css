@@ -1,8 +1,10 @@
-/*!
+/*
  * Copyright 2018 CyberOctane
  */
 
-/*----- 1. Reset.css -----*/
+/* ---------------------------------------------------------------------------------------------------------------------------------
+   ---------------------------------------------------------- 1. Reset.css ---------------------------------------------------------
+   --------------------------------------------------------------------------------------------------------------------------------- */
 
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -142,7 +144,9 @@ table {
     border-spacing: 0;
 }
 
-/* --- Common Styles ---*/
+/* ---------------------------------------------------------------------------------------------------------------------------------
+   ------------------------------------------------------- 2. Common Styles --------------------------------------------------------
+   --------------------------------------------------------------------------------------------------------------------------------- */
 
 h1,
 h2,
@@ -181,36 +185,9 @@ hr {
     margin: 5px 0;
 }
 
-.blkhr {
-    border-color: rgb(0, 0, 0);
-    border-width: 0.1vw;
-    margin: 0;
-}
-
-.container {
-    width: 100%;
-    padding: 0;
-    overflow: hidden;
-}
-
-@media (min-width:767.98px) {
-    .container {
-        width: 90%;
-    }
-}
-
-.imgbox {
-    overflow: hidden;
-    padding: 0;
-    margin: 0;
-}
-
-.imgbox img {
-    min-width: 100%;
-    max-height: 201%
-}
-
-/*----- Helper Classes -----*/
+/* ---------------------------------------------------------------------------------------------------------------------------------
+   ------------------------------------------------------- 3. Helper Classes --------------------------------------------------------
+   --------------------------------------------------------------------------------------------------------------------------------- */
 
 html * {
     text-rendering: optimizeLegibility !important;
@@ -231,12 +208,43 @@ body {
     box-sizing: border-box;
 }
 
+.container {
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+
+@media (min-width:767.98px) {
+    .container {
+        width: 90%;
+    }
+}
+
 .no-padding {
     padding: 0 !important;
     margin: 0 !important;
 }
 
-/*------ 2. Navbar Styling ------*/
+.blkhr {
+    border-color: rgb(0, 0, 0);
+    border-width: 0.1vw;
+    margin: 0;
+}
+
+.imgbox {
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.imgbox img {
+    min-width: 100%;
+    max-height: 201%
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------
+   ------------------------------------------------------- 4. Navbar Styling --------------------------------------------------------
+   --------------------------------------------------------------------------------------------------------------------------------- */
 
 .navbar-default {
     background-color: transparent;
@@ -290,9 +298,9 @@ body {
     transform: scale(0.5); */
     position: absolute;
     top: 50%;
-    -ms-transform: translateY(-50%) scale(0.5);
-    -webkit-transform: translateY(-50%) scale(0.5);
-    transform: translateY(-50%) scale(0.5);
+    -ms-transform: translateY(-50%) translateX(-10%) scale(0.5);
+    -webkit-transform: translateY(-50%) translateX(-10%) scale(0.5);
+    transform: translateY(-50%) translateX(-10%) scale(0.5);
     background-repeat: no-repeat;
 }
 
@@ -334,16 +342,70 @@ body {
     stroke: #f5d010;
 } */
 
-/* ----------- Desktops and laptops ----------- */
+/* ----------- Smartphones (Portrait & Landscape) ----------- */
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+    .navbar-default.past-main {
+        height: 60px;
+    }
+    .navbar-default .navbar-offset {
+        margin-top: 10px;
+    }
+    .navbar-default.past-main .navbar-offset {
+        margin-top: 0;
+    }
+    .navbar-default .navbar-offset .navbar-header .navbar-brand {
+        -ms-transform: scale(0.6);
+        -webkit-transform: scale(0.6);
+        transform: scale(0.6);
+    }
+}
+
+/* ----------- Smartphones (Portrait) ----------- */
+
+@media only screen and (min-width: 320px) and (max-width: 768px) and (orientation: portrait) {
+    .navbar-default .navbar-offset .hamburger-menu {
+        padding-top: 15px;
+    }
+    .navbar-default.past-main .navbar-offset .hamburger-menu {
+        padding-top: 10px;
+    }
+}
+
+/* ----------- Tabs (Portrait & Landscape) ----------- */
+
+@media only screen and (min-width: 768px) {
+    .navbar-default .navbar-offset .hamburger-menu {
+        margin-right: 0;
+    }
+}
+
+/* ----------- Desktops and Laptops ----------- */
 
 @media only screen and (min-width: 1224px) {
     .navbar-default .navbar-offset .hamburger-menu a {
-        padding-top: 5px;
+        padding-top: 7px;
         cursor: pointer;
     }
 }
 
-/*------ 3. Side-nav Styling ------*/
+/* 
+===========================================================
+================ iPhone 5 / 5S / 5C / 5SE =================
+===========================================================
+*/
+
+/* ------------ Landscape ------------ */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    .navbar-default.past-main {
+        height: 55px;
+    }
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------
+   ----------------------------------------------------- 5. Side-Menu Styling ------------------------------------------------------
+   --------------------------------------------------------------------------------------------------------------------------------- */
 
 .side-nav {
     height: 100%;
@@ -428,7 +490,9 @@ body {
     }
 }
 
-/*------ 4. Hero-Section Styling ------*/
+/* ---------------------------------------------------------------------------------------------------------------------------------
+   ---------------------------------------------------- 6. Hero-Section Styling-----------------------------------------------------
+   --------------------------------------------------------------------------------------------------------------------------------- */
 
 .hero-section {
     position: relative;
@@ -454,48 +518,74 @@ body {
     background-image: url(../img/header_03.jpg);
 }
 
-.hero-section .hero-section-inner {
+.hero-section-inner {
     position: absolute;
-    bottom: 40px;
-    padding-left: 20px;
+    bottom: 2vh;
+    padding-left: 3vh;
     color: #ffffff;
 }
 
-.hero-section .hero-section-inner h2 {
+.hero-section-inner h2 {
     font-family: 'Roboto Condensed';
     font-weight: 700;
-    font-size: 22px;
+    font-size: 20px;
     margin: 0;
     padding: 0;
 }
 
-.hero-section .hero-section-inner h3 {
+.hero-section-inner h3 {
     font-family: 'Roboto Condensed';
     font-weight: 300;
-    font-size: 22px;
+    font-size: 20px;
     margin: 0;
     padding-top: 5px;
-    padding-bottom: 2px;
+    padding-bottom: 2vh;
 }
 
-.hero-section .hero-section-inner a {
+.hero-section-inner a {
     font-family: 'Roboto Condensed';
     font-weight: 100;
-    font-size: 18px;
+    font-size: 17px;
     margin: 0;
     padding: 0;
     text-decoration: none;
 }
 
-.section h1 {
+/* .section h1 {
     text-align: center;
     color: #ffffff;
     font-size: 3em;
-}
+} */
 
 @media (min-width: 226px) {
     .navbar-right {
         float: right;
+    }
+}
+
+/* ----------- Smartphones (Landscape) ----------- */
+
+@media only screen and (min-width: 320px) and (orientation: landscape) {
+    .hero-section-inner {
+        bottom: 4vh;
+        padding-left: 20px;
+    }
+}
+
+/* ----------- Tabs (Portrait & Landscape) ----------- */
+
+@media only screen and (min-width: 768px) {
+    .hero-section-inner {
+        padding-left: 0;
+    }
+}
+
+/* ----------- Desktops and Laptops ----------- */
+
+@media only screen and (min-width: 1224px) {
+    .hero-section-inner {
+        bottom: 4vh;
+        padding-left: 0;
     }
 }
 
@@ -523,14 +613,14 @@ body {
 }
 
 .White-overlay h1 {
-    font-family: source sans pro black;
+    font-weight: 900;
     font-size: 4vw;
     text-align: left;
     color: black;
 }
 
 .White-overlay button {
-    font-family: roboto condensed;
+    font-family: 'Roboto Condensed';
     font-weight: 700;
     font-size: 1.1vw;
     border: none;
@@ -567,7 +657,7 @@ body {
 }
 
 .bodytext {
-    font-family: source sans pro;
+    font-family: 'Source Sans Pro';
     text-indent: 7%;
 }
 
@@ -687,7 +777,7 @@ body {
 }
 
 .servicestitle h1 {
-    font-family: source sans pro black;
+    font-weight: 900;
     font-size: 6vw;
     line-height: 90%;
     text-align: left;
@@ -709,7 +799,7 @@ body {
 }
 
 .hovexp h2 {
-    font-family: roboto condensed;
+    font-family: 'Roboto Condensed';
     font-weight: 700;
     color: white;
     margin: 3% 0;
@@ -758,7 +848,7 @@ body {
         float: left;
     }
     .hovexp h2 {
-        font-family: roboto condensed;
+        font-family: 'Roboto Condensed';
         font-weight: 700;
         color: white;
         margin: 3% 0;
@@ -934,7 +1024,9 @@ body {
     }
 }
 
-/*------ 8. Contact-Us Styling ------*/
+/* ---------------------------------------------------------------------------------------------------------------------------------
+   ----------------------------------------------------- 8. Contact-Us Styling -----------------------------------------------------
+   --------------------------------------------------------------------------------------------------------------------------------- */
 
 .map-inner {
     margin-top: 8vh;
@@ -949,9 +1041,9 @@ body {
 
 #contact-us hr {
     border-color: rgb(0, 0, 0);
-    border-width: 1px;
-    margin-left: 15px;
-    margin-right: 15px;
+    border-width: 1.5px;
+    /* margin-left: 15px;
+    margin-right: 15px; */
 }
 
 #contact-us h1 {
@@ -968,7 +1060,7 @@ body {
     color: #000000;
     font-weight: 300;
     font-size: 14px;
-    line-height: 1.2;
+    line-height: 1.3;
 }
 
 .location {
@@ -976,13 +1068,13 @@ body {
 }
 
 .locate-us {
-    padding-top: 4.5vh;
-    /* float: left; */
+    padding-top: 4vh;
+    float: left;
     padding-left: 4vh;
 }
 
 .address {
-    padding: 2vh 0;
+    padding: 3vh 0;
     float: right;
     margin-right: 4vh;
     /* padding-left: 4vh; */
@@ -995,7 +1087,7 @@ body {
 }
 
 .contact-social {
-    padding-top: 2vh;
+    padding-top: 3vh;
     float: left;
     text-align: right;
 }
@@ -1007,9 +1099,9 @@ body {
 
 .social-media-icons a,
 .social-media-icons a:focus {
-    font-size: 25px;
+    font-size: 22px;
     color: #000000;
-    padding-right: 30px;
+    padding-right: 25px;
     text-decoration: none;
 }
 
@@ -1020,38 +1112,41 @@ body {
 
 #contact-us .footer p {
     font-size: 10px;
-    padding-top: 2vh;
+    padding-top: 3.5vh;
 }
 
 .footer i {
     color: #f5d010;
 }
 
-/* ----------- For Mobile Devices ----------- */
+/* ----------- Mobile Devices (Portrait) ----------- */
 
 @media (max-width:768px) {
     .hr-top {
         display: none;
     }
     #info-container {
-        margin-left: 15px;
-        margin-right: 15px;
+        margin-left: 25px;
+        margin-right: 25px;
     }
     #contact-us hr {
-        border-width: 2px;
         margin: 0;
     }
 }
 
-/* ----------- Smartphones (landscape) ----------- */
+/* ----------- Mobile Devices (Landscape) ----------- */
 
-@media only screen and (min-width: 360px) and (orientation: landscape) {
+@media only screen and (min-width: 320px) and (orientation: landscape) {
+    .map-inner {
+        margin-top: 12vh;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
     #map {
         height: 70vh;
     }
     #contact-us hr {
         border-width: 2px;
-        /* margin: 0; */
     }
     #contact-us h1 {
         font-size: 20px;
@@ -1062,6 +1157,7 @@ body {
     #info-container {
         margin-left: 0;
         margin-right: 0;
+        padding-right: 30px;
     }
     .hr-top {
         display: block;
@@ -1069,26 +1165,26 @@ body {
     .locate-us {
         padding-top: 2vh;
         padding-left: 0;
+        padding-right: 25px;
+        float: left;
     }
     .address {
         padding-top: 2vh;
         padding-bottom: 2vh;
         float: left;
-        margin-right: 0vh;
     }
     .get-in-touch {
         padding-top: 2vh;
+        padding-bottom: 2vh;
         float: left;
-        margin-right: 0vh;
     }
     .contact-social {
-        padding-top: 1vh;
+        padding-top: 0;
         float: left;
         text-align: left;
     }
     .social-media-icons {
-        padding-top: 2vh;
-        padding-bottom: 2vh;
+        padding: 2vh 0;
     }
     .social-media-icons a,
     .social-media-icons a:focus {
@@ -1097,48 +1193,57 @@ body {
         text-decoration: none;
     }
     #contact-us .footer p {
-        padding-top: 4vh;
+        padding-top: 3vh;
+        padding-bottom: 0;
     }
 }
 
-/* Desktops and laptops ----------- */
+/* ------------ Tabs (Portrait & Landscape) ------------ */
 
-@media only screen and (min-width: 1224px) {
-    /* Styles */
+@media only screen and (min-width: 768px) {
+    .map-inner {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
-/* Large screens ----------- */
+/* ------------ Desktops and Laptops  ------------ */
+
+@media only screen and (min-width: 1224px) {}
+
+/* ------------ Large Screens ------------ */
 
 @media only screen and (min-width: 1824px) {
     .map-inner {
-        margin-top: 2vh;
+        margin-top: 4vh;
     }
     #map {
         height: 80vh;
     }
-    /* #info-container {
-        height: 85vh;
-    } */
     #contact-us hr {
         border-width: 3px;
         margin: 0;
     }
     #contact-us h1 {
-        font-size: 50px;
+        font-size: 65px;
+    }
+    #contact-us p {
+        font-size: 16px;
+        line-height: 1.5;
     }
     .locate-us {
-        padding-top: 6vh;
+        padding-top: 4vh;
         padding-bottom: 1vh;
         padding-left: 0;
     }
     .address {
-        padding-top: 5vh;
-        padding-bottom: 6vh;
+        padding-top: 3vh;
+        padding-bottom: 4vh;
         float: left;
         margin-right: 0vh;
     }
     .get-in-touch {
-        padding-top: 5vh;
+        padding-top: 4vh;
         padding-bottom: 2vh;
         float: left;
         margin-right: 0vh;
@@ -1159,6 +1264,280 @@ body {
     }
     #contact-us .footer p {
         font-size: 12px;
+        padding-top: 4vh;
+    }
+}
+
+/* 
+===========================================================
+======================== Galaxy S3 ========================
+===========================================================
+*/
+
+/* ------------ Portrait ------------ */
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+    /* ----------------------------------------- No Need Any CSS ----------------------------------------- */
+}
+
+/* ------------ Landscape ------------ */
+
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+    /* ----------------------------------------- No Need Any CSS ----------------------------------------- */
+}
+
+/* 
+===========================================================
+================= Galaxy S4 / S5 / Note 3 =================
+===========================================================
+*/
+
+/* ------------ Portrait ------------ */
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+    /* ----------------------------------------- No Need Any CSS ----------------------------------------- */
+}
+
+/* ------------ Landscape ------------ */
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+    /* ----------------------------------------- No Need Any CSS ----------------------------------------- */
+}
+
+/* 
+===========================================================
+======================== Galaxy S6 ========================
+===========================================================
+*/
+
+/* ------------ Portrait ------------ */
+
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 4) {
+    /* ----------------------------------------- No Need Any CSS ----------------------------------------- */
+}
+
+/* ------------ Landscape ------------ */
+
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 4) {
+    /* ----------------------------------------- No Need Any CSS ----------------------------------------- */
+}
+
+/* 
+===========================================================
+===================== Google Pixel 2 ======================
+===========================================================
+*/
+
+/* ------------ Portrait ------------ */
+
+@media screen and (min-width: 411px) and (max-height: 731px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2.6) {
+    #map {
+        height: 50vh;
+    }
+    #contact-us .footer p {
+        padding-top: 2.5vh;
+        padding-bottom: 0;
+    }
+}
+
+/* ------------ Landscape ------------ */
+
+@media screen and (min-width: 411px) and (max-height: 731px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2.6) {
+    #contact-us h1 {
+        font-size: 25px;
+    }
+    .social-media-icons a,
+    .social-media-icons a:focus {
+        font-size: 23px;
+        padding-right: 34px;
+    }
+    #contact-us .footer p {
+        padding-top: 5vh;
+        padding-bottom: 0;
+    }
+}
+
+/* 
+===========================================================
+==================== Google Pixel 2XL =====================
+===========================================================
+*/
+
+/* ------------ Portrait ------------ */
+
+@media screen and (min-width: 411px) and (max-height: 823px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3.5) {
+    #map {
+        height: 55vh;
+    }
+    #contact-us .footer p {
+        padding-top: 2vh;
+    }
+}
+
+/* 
+===========================================================
+====================== iPhone 4 / 4S ======================
+===========================================================
+*/
+
+/* ------------ Portrait ------------ */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {}
+
+/* ------------ Landscape ------------ */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {}
+
+/* 
+===========================================================
+================ iPhone 5 / 5S / 5C / 5SE =================
+===========================================================
+*/
+
+/* ------------ Portrait ------------ */
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+    .map-inner {
+        margin-top: 8vh;
+    }
+    #map {
+        height: 45vh;
+    }
+    #contact-us h1 {
+        font-size: 25px;
+    }
+    .locate-us {
+        padding-top: 5vh;
+        padding-left: 3vh;
+    }
+    .address {
+        margin-right: 3vh;
+    }
+    .get-in-touch {
+        padding: 3vh 0;
+        margin-right: 3vh;
+    }
+    #contact-us .footer p {
+        padding-top: 2.5vh;
+    }
+}
+
+/* ------------ Landscape ------------ */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    .map-inner {
+        margin-top: 14vh;
+    }
+    #map {
+        height: 72vh;
+    }
+    #contact-us h1 {
+        font-size: 19px;
+    }
+    #contact-us p {
+        font-size: 10px;
+    }
+    .social-media-icons {
+        padding: 2vh 0;
+    }
+    .social-media-icons a,
+    .social-media-icons a:focus {
+        font-size: 18px;
+        padding-right: 25px;
+    }
+    #contact-us .footer p {
+        padding-top: 3vh;
+    }
+}
+
+/* 
+===========================================================
+================== iPhone 6 / 6S / 7 / 8 ==================
+===========================================================
+*/
+
+/* ------------ Portrait ------------ */
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    /* ----------------------------------------- Styles Goes Here ----------------------------------------- */
+}
+
+/* ------------ Landscape ------------ */
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    #contact-us .footer p {
+        padding-top: 4.5vh;
+    }
+}
+
+/* 
+===========================================================
+=================== iPhone 6+ / 7+ / 8+ ===================
+===========================================================
+*/
+
+/* ------------ Portrait ------------ */
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) {
+    #map {
+        height: 52vh;
+    }
+    #contact-us .footer p {
+        padding-top: 2.5vh;
+    }
+}
+
+/* ------------ Landscape ------------ */
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 3) {
+    #contact-us h1 {
+        font-size: 25px;
+    }
+    .social-media-icons a,
+    .social-media-icons a:focus {
+        font-size: 25px;
+        padding-right: 35px;
+    }
+    #contact-us .footer p {
         padding-top: 5vh;
     }
 }
+
+/* 
+===========================================================
+========================= iPhone X ========================
+===========================================================
+*/
+
+/* ------------ Portrait ------------ */
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) {
+    .map-inner {
+        margin-top: 6vh;
+    }
+    #map {
+        height: 53vh;
+    }
+    #contact-us h1 {
+        font-size: 35px;
+    }
+    .locate-us {
+        padding-left: 2vh;
+    }
+    .address {
+        margin-right: 2vh;
+    }
+    .get-in-touch {
+        margin-right: 2vh;
+    }
+    .contact-social {
+        padding-top: 3.5vh;
+    }
+    #contact-us .footer p {
+        padding-top: 2.5vh;
+    }
+}
+
+/* ------------ Landscape ------------ */
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 3) {}
