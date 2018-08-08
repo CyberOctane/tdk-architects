@@ -57,12 +57,12 @@ window.onresize = function (event) {
 function applyOrientation() {
     if (window.innerHeight > window.innerWidth) {
         // alert("You are now in portrait");
-        document.getElementById('map-container').classList.remove('col-xs-9');
-        document.getElementById('info-container').classList.remove('col-xs-3');
+        document.getElementById('map-container').classList.remove('col-xs-8');
+        document.getElementById('info-container').classList.remove('col-xs-4');
     } else {
         // alert("You are now in landscape");
-        document.getElementById('map-container').classList.add('col-xs-9');
-        document.getElementById('info-container').classList.add('col-xs-3');
+        document.getElementById('map-container').classList.add('col-xs-8');
+        document.getElementById('info-container').classList.add('col-xs-4');
     }
 }
 /*function carouselWowAnimation() {
