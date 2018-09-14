@@ -1,7 +1,8 @@
 /*----team-page styling----*/
 
 .team-grid {
-    padding: 10vw
+    padding: 10vw;
+    margin-top: 72px;
 }
 
 .page-heading {
