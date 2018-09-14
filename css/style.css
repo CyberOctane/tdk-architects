@@ -185,6 +185,40 @@ hr {
     margin: 5px 0;
 }
 
+/**** heading sections of pages ****/
+.page-heading {
+    padding: 0.8em 0 ;
+}
+.page-heading h1 {
+    font-weight: 900;
+    font-size: 10vw;
+    line-height:0.9em;
+}
+.page-heading h2 {
+    font-weight: 400;
+    font-size: 6vw;
+}
+.page-heading .details-1 {
+    font-weight: 900;
+    font-size: 130%;
+    line-height: 1em;
+}
+.page-heading .details-2 {
+    font-weight: 600;
+    font-size: 100%;
+    line-height: 1em;
+}
+
+@media (min-width:1200px){
+    .page-heading h1{
+    font-size: 4vw;
+    }
+    .page-heading h2 {
+    font-weight: 400;
+    font-size: 2vw;
+}
+}
+
 /* ---------------------------------------------------------------------------------------------------------------------------------
    ------------------------------------------------------- 3. Helper Classes --------------------------------------------------------
    --------------------------------------------------------------------------------------------------------------------------------- */
@@ -414,7 +448,7 @@ body {
     z-index: 101;
     top: 0;
     right: 0;
-    text-align: center;
+    text-align: right;
     background-color: #f5d010;
     opacity: 0.95;
     margin: 0;
@@ -437,9 +471,9 @@ body {
 .side-nav .side-nav-items {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 35%;
     transform: translate(-50%, -50%);
-    width: 400px;
+    width: 30vw;
 }
 
 .side-nav .side-nav-items ul {
@@ -450,7 +484,7 @@ body {
 .side-nav .side-nav-items a:focus {
     padding: 10px 10px 10px 10px;
     font-size: 30px;
-    font-weight: 700;
+    font-weight: 400;
     color: #000000;
     display: block;
     -webkit-transition: all 0.35s;
@@ -461,7 +495,6 @@ body {
 
 .side-nav .side-nav-items a:hover,
 .side-nav .side-nav-items a:focus:hover {
-    color: #ffffff;
     font-weight: 900;
 }
 
@@ -479,8 +512,8 @@ body {
 @media only screen and (min-width: 1224px) {
     .side-nav .side-nav-items a,
     .side-nav .side-nav-items a:focus {
-        padding: 10px 10px 10px 10px;
-        font-size: 45px;
+        padding: 1px;
+        font-size: 4.7vw;
     }
     .side-nav .btn-close {
         top: 30px;
@@ -589,16 +622,15 @@ body {
     }
 }
 
-/*------ 5. About Us Styling ------*/
+/* * * * ----------- 5. About Us Styling ----------- * * * */
 
 #about {
     height: 40vh;
 }
 
-@media (min-width:1200px) {
-    #about {
-        height: 80vh;
-    }
+#about img{
+  
+    max-height:76vh;
 }
 
 .White-overlay {
@@ -612,32 +644,24 @@ body {
     padding: 7vw 5vw;
 }
 
-.White-overlay h1 {
-    font-weight: 900;
-    font-size: 4vw;
+#about h1 {
+    font-weight: 400;
+    font-size: 3vh;
     text-align: left;
     color: black;
 }
 
-.White-overlay button {
+#about button {
     font-family: 'Roboto Condensed';
-    font-weight: 700;
-    font-size: 1.1vw;
+    font-weight: 900;
+    font-size: 3vw;
     border: none;
+    padding: 0vw 0;
     background-color: transparent;
-    position: absolute;
-    right: 3.5vw;
-    bottom: 6vw;
 }
 
 .lgonly {
     display: none;
-}
-
-@media (min-width:1200px) {
-    .lgonly {
-        display: block;
-    }
 }
 
 .textbox {
@@ -645,15 +669,6 @@ body {
     padding: 1vw 0;
     position: relative;
     overflow-y: scroll;
-}
-
-@media (min-width:1200px) {
-    .textbox {
-        height: 45vh;
-        padding: 2vh 0;
-        position: relative;
-        overflow-y: hidden;
-    }
 }
 
 .bodytext {
@@ -670,7 +685,7 @@ body {
     line-height: 1.6vw;
 }
 
-/*---carousel---*/
+/* * ---carousel--- * */
 
 /* carousel Logos */
 
@@ -740,6 +755,34 @@ body {
     }
 }
 
+/* Services section for desktop */
+
+@media (min-width:1200px) {
+    #about {
+        height: 80vh;
+    }
+    #about img{
+  
+    max-height:100%;
+    }
+    
+    #about button {
+    font-size: 1.1vw;
+    padding: 8vw 0;
+    }
+    
+    .lgonly {
+        display: block;
+    }
+    
+    .textbox {
+        height: 45vh;
+        padding: 2vh 0;
+        position: relative;
+        overflow-y: hidden;
+    }
+}
+
 /*------ 6. Services Styling ------*/
 
 .services {
@@ -777,8 +820,10 @@ body {
 }
 
 .servicestitle h1 {
+    font-family: source sans pro;
     font-weight: 900;
     font-size: 6vw;
+    color: white;
     line-height: 90%;
     text-align: left;
     float: left;
@@ -834,7 +879,6 @@ body {
         float: none;
     }
     .servicestitle h1 {
-        font-family: source sans pro black;
         font-size: 4vw;
         line-height: 90%;
         text-align: center;
@@ -889,7 +933,7 @@ body {
 @media (min-width:1200px) {
     .grid-container {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(6, 1fr);
         background-color: #ffffff;
     }
     .nested-items {
@@ -941,9 +985,9 @@ body {
         color: #000000;
         text-align: center;
         font-weight: 900;
-        font-size: 6.5vh;
+        font-size: 1.1vw;
         margin: 0;
-        padding: 0 5vh;
+        padding: 0 10.2vw;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);

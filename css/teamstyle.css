@@ -1,0 +1,63 @@
+/*----team-page styling----*/
+
+.team-grid {
+    padding: 10vw
+}
+
+.page-heading {
+    font-family: source sans pro;
+    font-weight: 900;
+    font-size: 10vw;
+    padding: 0.8em 0 ;
+}
+
+.team-member {
+    margin-bottom: 10%;
+}
+
+.team-member h1 {
+    font-family: roboto condensed;
+    font-weight: 700;
+    font-size: 130%;
+}
+.team-member h2 {
+    font-family: roboto;
+}
+
+.mmbr-photo {
+        height: 40vw;
+        margin-bottom: 10%;
+        background-color: aquamarine;
+    }
+
+/*----Desktop----*/
+@media (min-width:1200px){
+    
+    .team-grid {
+    padding: 0;
+    }
+    
+    .team-row {
+    margin: 0 -3vw;
+    }
+    
+    .page-heading {
+    font-size: 4vw;
+    }
+    
+    .team-member {
+        padding: 1vw 3vw;
+        margin-bottom: 0;
+    }
+    
+    .team-member h1 {
+    font-size: 1.5vw;
+    }
+    
+    .mmbr-photo {
+        height: 15vw;
+        margin-bottom: 5%;
+        background-color: aquamarine;
+    }
+    
+}
