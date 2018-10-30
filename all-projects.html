@@ -51,20 +51,22 @@
         
         <!-- Page Heading -->
         <div class="page-heading">
+            <hr>
             <h1>OUR PROJECTS</h1>
+            <hr>
         </div>
         <div id="filter-menu">
             <div id="filter-select">
-                <button id="sector" class="filter ">
+                <button id="sector" class="filter dropbtn">
                     SECTOR:
-                    <h3 id="sector-btn" class="dropbtn">SECTOR</h3>
+                    <h3 id="sector-btn">SECTOR</h3>
                 </button>
-                <button id="service" class="filter ">
+                <button id="service" class="filter dropbtn">
                     SERVICE:
-                    <h3 id="service-btn" class="dropbtn ">SERVICE</h3>
+                    <h3 id="service-btn">SERVICE</h3>
                 </button>
-                <button id="all" >
-                    <h3 class="dropbtn">SEE ALL<br>PROJECTS</h3>
+                <button id="all" class="dropbtn">
+                    <h3>SEE ALL<br>PROJECTS</h3>
                 </button>
             </div>
             <div id="sector-menu" class="dropmenu">
@@ -101,9 +103,7 @@
         <script>
             var sector ;
             var service ;
-            var sectorBtn ;
-            var serviceBtn ;
-            var openFilter  ;
+            var openFilter ;
             
             select ("sector");
             select ("service");
@@ -119,11 +119,10 @@
                         toggle_menu();
                     } else if (openFilter ===this) {
                         toggle_menu();
-                        openMenuId = "";
+                        openFilter = undefined;
                     } else {
                         openFilter = this;
-                        toggle_menu();
-                        
+                        toggle_menu(); 
                     }
                     e.stopPropagation(); 
                 })
@@ -138,7 +137,7 @@
             //close open menu on click on document
             document.addEventListener('click',function(){
                 toggle_menu();
-                openMenuId ="";
+                openFilter = undefined;;
                 //alert(openMenu);
             })
             
@@ -147,10 +146,16 @@
             function select(category,){
                 var menu =document.getElementById(category+"-menu");
                 menu.addEventListener('click', function(e){
-                window[category] =e.target.id;
-                window[category+"Btn"] =e.target.textContent;
-                document.getElementById(category+"-btn").textContent =e.target.textContent;
-                filter();
+                    if (e.target.tagName !='A'){
+                        e.stopPropagation();
+                        return;
+                    } else {
+                        window[category] =e.target.id;
+                        //set button text
+                        document.getElementById(category+"-btn").textContent =e.target.textContent;
+                        filter();
+                    }
+                    
                 }, false);
             }
             
@@ -160,8 +165,8 @@
             function all(){
                 sector ="project-item";
                 service ="project-item" ;
-                sectorBtn = "ALL";
-                serviceBtn = "ALL";
+                document.getElementById("service-btn").textContent ="All";
+                document.getElementById("sector-btn").textContent ="All";
                 filter();
             }
             
@@ -171,10 +176,7 @@
                 for(i=0; i<all.length; i++){
                     all[i].classList.remove("show");
                     if(all[i].classList.contains(sector) && all[i].classList.contains(service)){all[i].classList.add("show");}
-                }   
-                /// set button text ///
-                //document.getElementById("sector-btn").textContent =sectorBtn;
-                //document.getElementById("service-btn").textContent =serviceBtn;
+                }
             }
             
         </script>
