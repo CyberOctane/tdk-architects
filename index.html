@@ -85,23 +85,39 @@
     <div id="side-menu" class="side-nav">
         <a class="btn-close" onclick="closeSlideMenu()">&times;</a>
         <div id="side-nav-items" class="side-nav-items">
-            <ul id="hamMenu">
-                <li id="side-nav-li-1" class="wow" data-wow-delay="0s" data-menuanchor="firstPage">
-                    <a href="#firstPage" onclick="closeSlideMenu()">HOME</a>
-                </li>
-                <li id="side-nav-li-2" class="wow" data-wow-delay="0.1s" data-menuanchor="secondPage">
-                    <a href="#secondPage" onclick="closeSlideMenu()">ABOUT US</a>
-                </li>
-                <li id="side-nav-li-3" class="wow" data-wow-delay="0.2s" data-menuanchor="3rdPage">
-                    <a href="#3rdPage" onclick="closeSlideMenu()">SERVICES</a>
-                </li>
-                <li id="side-nav-li-4" class="wow" data-wow-delay="0.3s" data-menuanchor="4thPage">
-                    <a href="#4thPage" onclick="closeSlideMenu()">PORTFOLIO</a>
-                </li>
-                <li id="side-nav-li-5" class="wow" data-wow-delay="0.4s" data-menuanchor="5thPage">
-                    <a href="#5thPage" onclick="closeSlideMenu()">CONTACT US</a>
-                </li>
-            </ul>
+            <div id="hamMenu">
+                <div id="side-nav-li-1" class="wow" data-wow-delay="0s" data-menuanchor="firstPage" >
+                    <div>
+                        <a href="#firstPage" onclick="closeSlideMenu()">HOME</a>
+                    </div>
+                    <hr>
+                </div>
+                <div id="side-nav-li-2" class="wow" data-wow-delay="0.1s" data-menuanchor="secondPage">
+                    <div>
+                        <a href="#secondPage" onclick="closeSlideMenu()">ABOUT US</a>
+                        <a class="menu-sub-sec" href="team.html" onclick="closeSlideMenu()">SEE THE TEAM</a>
+                    </div>
+                    <hr>
+                </div>
+                <div id="side-nav-li-3" class="wow" data-wow-delay="0.2s" data-menuanchor="3rdPage">
+                    <div>
+                        <a href="#3rdPage" onclick="closeSlideMenu()">SERVICES</a>
+                    </div>
+                    <hr>
+                </div>
+                <div id="side-nav-li-4" class="wow" data-wow-delay="0.3s" data-menuanchor="4thPage">
+                    <div>    
+                        <a href="#4thPage" onclick="closeSlideMenu()">PORTFOLIO</a>
+                    </div>
+                    <hr>
+                </div>
+                <div id="side-nav-li-5" class="wow" data-wow-delay="0.4s" data-menuanchor="5thPage">
+                    <div>
+                        <a href="#5thPage" onclick="closeSlideMenu()">CONTACT US</a>
+                    </div>
+                    <hr>
+                </div>
+            </div>
         </div>
     </div>
     <!-- Side Menu End -->
@@ -151,32 +167,30 @@
         <div id="about-us" class="section">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 imgbox" id="about">
+                    <div class="col-lg-8imgbox" id="about">
                         <div class="White-overlay">
                             <h1>WE ARE A<br>TEAM OF<br>ARCHITECTS<br><br>AND LOT MORE</h1>
                             <a href="team.html">SEE THE TEAM</a>
                         </div>
-                        <img src="img/About_us/studio001.png" style="" >
                     </div>
                     <div class="col-lg-4">
                         <hr class="blkhr lgonly">
                         <div class="textbox">
                             <p class="bodytext">
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.<span> Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
                                 consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-                            </p><br>
-                            <p class="bodytext">
+                            <br>
                                 Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diamnonummy nibh euismod tincidunt ut laoreet dolore magna aliquam eratvolutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
                                 suscipit lobortis nisl ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel
-                                eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+                                eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</span>
                             </p>
                         </div>
-                        <hr class="blkhr lgonly">
+                        <hr class="blkhr">
                         <div id="us-phrase-div">
                             <p id="us-phrase">Lorem ipsum
                                 <br>dolor sit amet, consectetuer</p>
                         </div>
-                        <hr class="blkhr">
+                        <hr class="blkhr ">
                         <!--carousel-->
                         <div id="clients" class="owl-carousel owl-theme">
                             <div class="logos">
@@ -338,81 +352,79 @@
 
         <!-- Projects-Section Start -->
         <div id="projects" class="section">
-            <div class="container">
-                <div class="grid-container">
-                    <div id="item-1" class="grid-item horizontal-box">
-                        <div class="grid-item-inner">
-                            <a href="">
-                                <img src="./img/Portfolio-Section/Thumbnails/1.jpg" class="img-responsive" alt="">
-                            </a>
-                        </div>
+            <div class="grid-container">
+                <div id="item-1" class="grid-item horizontal-box">
+                    <div class="grid-item-inner">
+                        <a href="">
+                            <img src="./img/Portfolio-Section/Thumbnails/1.jpg" class="" alt="">
+                        </a>
                     </div>
-                    <div id="item-2" class="grid-item horizontal-box">
-                        <div class="grid-item-inner">
-                            <a href="">
-                                <img src="./img/Portfolio-Section/Thumbnails/2.jpg" class="img-responsive" alt="">
-                            </a>
-                        </div>
+                </div>
+                <div id="item-2" class="grid-item horizontal-box">
+                    <div class="grid-item-inner">
+                        <a href="">
+                            <img src="./img/Portfolio-Section/Thumbnails/2.jpg" class="img-responsive" alt="">
+                        </a>
                     </div>
-                    <div id="nested-container-1">
-                        <div class="nested-items">
-                            <div id="item-3" class="grid-item vertical-box">
-                                <div class="grid-item-inner">
-                                    <a href="">
-                                        <img src="./img/Portfolio-Section/Thumbnails/3.jpg" class="img-responsive" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div id="item-4" class="grid-item vertical-box">
-                                <div class="grid-item-inner">
-                                    <a href="">
-                                        <img src="./img/Portfolio-Section/Thumbnails/4.jpg" class="img-responsive" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="nested-container-2">
-                        <div class="nested-items">
-                            <div id="item-5" class="grid-item vertical-box">
-                                <div class="grid-item-inner">
-                                    <a href="">
-                                        <img src="./img/Portfolio-Section/Thumbnails/5.jpg" class="img-responsive" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div id="item-6" class="grid-item vertical-box">
-                                <div class="grid-item-inner">
-                                    <a href="">
-                                        <img src="./img/Portfolio-Section/Thumbnails/6.jpg" class="img-responsive" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="item-7" class="grid-item horizontal-box">
-                        <div class="grid-item-inner">
-                            <img src="./img/Portfolio-Section/Thumbnails/7.jpg" class="img-responsive" alt="">
-                            <div class="fade">
+                </div>
+                <div id="nested-container-1">
+                    <div class="nested-items">
+                        <div id="item-3" class="grid-item vertical-box">
+                            <div class="grid-item-inner">
                                 <a href="">
-                                    <h1>SEE ALL PROJECTS</h1>
+                                    <img src="./img/Portfolio-Section/Thumbnails/3.jpg" class="img-responsive" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div id="item-4" class="grid-item vertical-box">
+                            <div class="grid-item-inner">
+                                <a href="">
+                                    <img src="./img/Portfolio-Section/Thumbnails/4.jpg" class="img-responsive" alt="">
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div id="item-8" class="grid-item horizontal-box">
-                        <div class="grid-item-inner">
-                            <a href="">
-                                <img src="./img/Portfolio-Section/Thumbnails/8.jpg" class="img-responsive" alt="">
+                </div>
+                <div id="nested-container-2">
+                    <div class="nested-items">
+                        <div id="item-5" class="grid-item vertical-box">
+                            <div class="grid-item-inner">
+                                <a href="">
+                                    <img src="./img/Portfolio-Section/Thumbnails/5.jpg" class="img-responsive" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div id="item-6" class="grid-item vertical-box">
+                            <div class="grid-item-inner">
+                                <a href="">
+                                    <img src="./img/Portfolio-Section/Thumbnails/6.jpg" class="img-responsive" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="item-7" class="grid-item horizontal-box">
+                    <div class="grid-item-inner">
+                        <img src="./img/Portfolio-Section/Thumbnails/7.jpg" class="img-responsive" alt="">
+                        <div class="fade">
+                            <a href="all-projects.html">
+                                <h1>SEE ALL PROJECTS</h1>
                             </a>
                         </div>
                     </div>
-                    <div id="item-9" class="grid-item horizontal-box">
-                        <div class="grid-item-inner">
-                            <a href="">
-                                <img src="./img/Portfolio-Section/Thumbnails/9.jpg" class="img-responsive" alt="">
-                            </a>
-                        </div>
+                </div>
+                <div id="item-8" class="grid-item horizontal-box">
+                    <div class="grid-item-inner">
+                        <a href="">
+                            <img src="./img/Portfolio-Section/Thumbnails/8.jpg" class="img-responsive" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div id="item-9" class="grid-item horizontal-box">
+                    <div class="grid-item-inner">
+                        <a href="">
+                            <img src="./img/Portfolio-Section/Thumbnails/9.jpg" class="img-responsive" alt="">
+                        </a>
                     </div>
                 </div>
             </div>

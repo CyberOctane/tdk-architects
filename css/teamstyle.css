@@ -2,7 +2,7 @@
 
 .team-grid {
     padding: 10vw;
-    margin-top: 72px;
+    margin-top: 7.5vh;
 }
 
 .page-heading {
@@ -28,8 +28,14 @@
 .mmbr-photo {
         height: 40vw;
         margin-bottom: 10%;
-        background-color: aquamarine;
+        background-color: #f0f4f9;
     }
+#mmbr-1 {
+    background-image: url(../img/Team_members/member_01/member_01.png);
+    background-size: 140%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
 /*----Desktop----*/
 @media (min-width:1200px){
@@ -52,13 +58,17 @@
     }
     
     .team-member h1 {
-    font-size: 1.5vw;
+        font-size: 1.5vw;
+        margin-bottom: 0.23em;
     }
     
     .mmbr-photo {
         height: 15vw;
         margin-bottom: 5%;
-        background-color: aquamarine;
+    }
+    
+    #mmbr-1:hover {
+    background-image: url(../img/Team_members/member_01/member_01_fr.png);
     }
     
 }

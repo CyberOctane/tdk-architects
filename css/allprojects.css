@@ -1,0 +1,110 @@
+/*----All projects page styling----*/
+
+.page-heading {
+    margin-top: 7.5vh;
+    padding: 2% 8%;
+    position: sticky;
+    top: 7.5vh;
+    z-index: 2;
+    background-color: white;
+}
+
+#filter-select {
+    display: flex;
+    padding: 6% 0;
+}
+
+.filter {
+    width: 100%;
+    padding-left: 8%;
+    text-align: left;
+    background-color: transparent;
+    border: none;
+    font-weight: 800;
+}
+.filter-open {
+    background-color: yellow;
+}
+.filter h3 {
+    font-size: 0.9em;
+}
+
+.dropbtn {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    font-weight: 800;
+}
+
+.dropmenu {
+    display: ;
+    position: absolute;
+    z-index: 2;
+    background-color: #ffdd11;
+    width: 100vw;
+    height: 0;
+    overflow: hidden;
+    transform: 1s;
+}
+
+.dropmenu a{
+    color: #333;
+    display: block;
+    padding: 0.5em;
+    text-decoration: none;
+    background-color: red
+}
+
+.dropmenu a:active {
+    background-color: red;
+}
+
+.dropmenu a:hover {
+    font-weight: 900;
+}
+
+.dropdown:hover .dropmenu {
+    display: block;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.project-item {
+    height: 50vw;
+    display: none;
+}
+
+.project-overlay {
+    background-color: rgba(255, 255, 255, 0.9);
+    height: inherit;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 1;
+    opacity: 1;
+    padding: 10.5vh 5vw 3vh;
+}
+.right-overlay {
+    right: 0;
+}
+.prjctnme {
+    font-weight: 700;
+}
+
+.show {
+    display: block;
+}
+.expand-menu {
+    height: inherit;
+} 
+
+////* ---project-tiles--- *////
+
+#first
