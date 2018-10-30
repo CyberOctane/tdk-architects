@@ -103,7 +103,7 @@
             var service ;
             var sectorBtn ;
             var serviceBtn ;
-            var openFilter ;
+            var openFilter  ;
             
             select ("sector");
             select ("service");
@@ -113,17 +113,17 @@
             var filters =document.getElementsByClassName("filter");
             for (i=0; i<filters.length; i++){
                 filters[i].addEventListener('click', function(e){
-                    alert(openFilter);
                     if (openFilter !==undefined && openFilter !==this){
-                        document.getElementById(openMenuId).classList.toggle("expand-menu");
-                        openMenuId = this.id+"-menu";
-                        document.getElementById(openMenuId).classList.toggle("expand-menu");
-                    } else if (openFilter ===this) {
+                        toggle_menu();
                         openFilter = this;
-                        alert(openFilter);
-                    } else {
-                        toggle_menu(this);
+                        toggle_menu();
+                    } else if (openFilter ===this) {
+                        toggle_menu();
                         openMenuId = "";
+                    } else {
+                        openFilter = this;
+                        toggle_menu();
+                        
                     }
                     e.stopPropagation(); 
                 })
@@ -137,7 +137,7 @@
             
             //close open menu on click on document
             document.addEventListener('click',function(){
-                document.getElementById(openMenuId).classList.remove("expand-menu");
+                toggle_menu();
                 openMenuId ="";
                 //alert(openMenu);
             })
