@@ -706,6 +706,12 @@ body {
     padding: 0vw 0;
 }
 
+#about a span{
+    font-weight: 900;
+    font-size: 35px;
+    line-height: 0.5em;
+}
+
 #about-us hr {
     border-width: 2px;
 }
@@ -828,6 +834,8 @@ body {
     
     .White-overlay {
         padding: 5vw 5vw;
+        height: 100%;
+        width: 50%;
     }
     
     #about h1{
@@ -839,7 +847,7 @@ body {
     
     #about a{
         font-size: 1.1vw;
-        padding: 8vw 0;
+        padding: 0;
     }
     
     .lgonly {
