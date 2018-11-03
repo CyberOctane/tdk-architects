@@ -8,7 +8,7 @@ $(document).ready(function () {
         responsiveHeight: 500,
         scrollBar:true,
         sectionSelector: '.section',
-        scrollOverflow: true,
+        scrollOverflow:true,
         //easingcss3: 'cubic-bezier(0.175, 0.885, 0.320, 1.275)'
     });
 });

@@ -26,7 +26,7 @@
 
     <!-- All Plugins CSS -->
     <!-- Fullpage.js CSS -->
-    <link rel="stylesheet" type="text/css" href="./vendor/fullpage.js/css/jquery.fullPage.css">
+    <link rel="stylesheet" type="text/css" href="./vendor/fullpage-js/css/jquery.fullPage.css">
     <!-- Animate.css CSS -->
     <link rel="stylesheet" type="text/css" href="./vendor/animate.css/animate.css">
     <!-- Owl Carousel CSS -->
@@ -167,13 +167,13 @@
         <div id="about-us" class="section">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8imgbox" id="about">
+                    <div class="col-lg-8 imgbox" id="about">
                         <div class="White-overlay">
                             <h1>WE ARE A<br>TEAM OF<br>ARCHITECTS<br><br>AND LOT MORE</h1>
                             <a href="team.html">SEE THE TEAM</a>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4" id="about-description">
                         <hr class="blkhr lgonly">
                         <div class="textbox">
                             <p class="bodytext">
@@ -403,7 +403,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="item-7" class="grid-item horizontal-box">
+                <div id="item-7" class="grid-item">
                     <div class="grid-item-inner">
                         <img src="./img/Portfolio-Section/Thumbnails/7.jpg" class="img-responsive" alt="">
                         <div class="fade">
@@ -439,29 +439,27 @@
                         <div id="map"></div>
                     </div>
                     <div id="info-container" class="col-md-2">
-                        <div class="row">
-                            <hr class="hr-top">
-                            <div class="location">
-                                <div class="locate-us">
-                                    <h1>Locate</h1>
-                                    <h1>Us</h1>
-                                </div>
-                                <div class="address">
-                                    <p>74/7, Pragathi Pura, 3rd Lane,</p>
-                                    <p>Katuwawala Road,</p>
-                                    <p>Maharagama</p>
-                                    <p>Sri Lanka</p>
-                                </div>
+                        <hr class="hr-top">
+                        <div class="location" style="background-color: ;">
+                            <div class="locate-us">
+                                <h1>Locate</h1>
+                                <h1>Us</h1>
+                            </div>
+                            <div class="address">
+                                <p>74/7, Pragathi Pura, 3rd Lane,</p>
+                                <p>Katuwawala Road,</p>
+                                <p>Maharagama</p>
+                                <p>Sri Lanka</p>
                             </div>
                         </div>
-                        <div class="row">
-                            <hr class="hr-middle">
-                            <div class="get-in-touch">
+                        <hr class="hr-middle">
+                        <div class="getting-touch" style="background-color: ">
+                            <div class="get-in-touch" style="background-color:;">
                                 <h1>Get</h1>
                                 <h1>In</h1>
                                 <h1>Touch</h1>
                             </div>
-                            <div class="contact-social">
+                            <div class="contact-social" style="background-color: ;">
                                 <div class="contact-details">
                                     <p>E-Mail : info@tdkarchitects.lk</p>
                                     <p>Phone : +94 71 818 8244</p>
@@ -482,12 +480,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <hr class="hr-bottom">
-                        </div>
+                        <hr class="hr-bottom">
                     </div>
                 </div>
-            </div>
             <div class="container footer text-center">
                 <p>Designed & Developed with &nbsp;
                     <span>
@@ -506,7 +501,7 @@
 
     <!-- Plugin JavaScript -->
     <!-- Fullpage.js -->
-    <script src="./vendor/fullpage.js/js/jquery.fullPage.js"></script>
+    <script src="./vendor/fullpage-js/js/jquery.fullPage.js"></script>
     <!-- jQuery Easing -->
     <script src="./vendor/jquery.easing/jquery.easing.js"></script>
     <!-- wow.js -->
