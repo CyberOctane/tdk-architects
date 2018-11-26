@@ -434,12 +434,12 @@
         <div id="contact-us" class="section">
             <div class="container map-inner">
                 <div class="row">
-                    <div id="map-container" class="col-md-10">
+                    <div id="map-holder" class="col-lg-10 col-sm-9">
                         <div id="map"></div>
                     </div>
-                    <div id="info-container" class="col-md-2">
+                    <div id="info-container" class="col-lg-2 col-sm-3">
                         <hr class="hr-top">
-                        <div class="location" style="background-color: ;">
+                        <div class="location">
                             <div class="locate-us">
                                 <h1>Locate</h1>
                                 <h1>Us</h1>
@@ -452,13 +452,13 @@
                             </div>
                         </div>
                         <hr class="hr-middle">
-                        <div class="getting-touch" style="background-color: ">
-                            <div class="get-in-touch" style="background-color:;">
+                        <div class="getting-touch">
+                            <div class="get-in-touch">
                                 <h1>Get</h1>
                                 <h1>In</h1>
                                 <h1>Touch</h1>
                             </div>
-                            <div class="contact-social" style="background-color: ;">
+                            <div class="contact-social">
                                 <div class="contact-details">
                                     <p>E-Mail : info@tdkarchitects.lk</p>
                                     <p>Phone : +94 71 818 8244</p>
@@ -482,59 +482,58 @@
                         <hr class="hr-bottom">
                     </div>
                 </div>
-            <div class="container footer text-center">
-                <p>Designed & Developed with &nbsp;
-                    <span>
-                        <i class="fa fa-heart"></i>
-                    </span> &nbsp; by TDK Illusions</p>
             </div>
+            <div class="footer text-center">
+                <p>Designed & Developed with &nbsp;
+                <span><i class="fa fa-heart"></i></span>
+                &nbsp; by TDK Illusions</p>
+            </div>
+            <!-- Contact Us End -->
         </div>
-        <!-- Contact Us End -->
-    </div>
-    <!-- jQuery CDN -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="./vendor/jquery/jquery.min.js"></script>
+        <!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="./vendor/jquery/jquery.min.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
 
-    <!-- Plugin JavaScript -->
-    <!-- Fullpage.js -->
-    <script src="./vendor/fullpage-js/js/jquery.fullPage.js"></script>
-    <!-- jQuery Easing -->
-    <script src="./vendor/jquery.easing/jquery.easing.js"></script>
-    <!-- wow.js -->
-    <script src="./vendor/wow.js/wow.js"></script>
-    <!-- Owl Carousel -->
-    <script src="./vendor/owl.carousel/js/owl.carousel.js"></script>
+        <!-- Plugin JavaScript -->
+        <!-- Fullpage.js -->
+        <script src="./vendor/fullpage-js/js/jquery.fullPage.js"></script>
+        <!-- jQuery Easing -->
+        <script src="./vendor/jquery.easing/jquery.easing.js"></script>
+        <!-- wow.js -->
+        <script src="./vendor/wow.js/wow.js"></script>
+        <!-- Owl Carousel -->
+        <script src="./vendor/owl.carousel/js/owl.carousel.js"></script>
 
-    <!-- Theme JavaScript -->
-    <script src="./js/fullpage.controller.js"></script>
-    <script src="./js/script.js"></script>
-    <script src="./js/custom.js"></script>
-    <!-- Google Map Initialization -->
-    <script>
-        var map, marker;
+        <!-- Theme JavaScript -->
+        <script src="./js/fullpage.controller.js"></script>
+        <script src="./js/script.js"></script>
+        <script src="./js/custom.js"></script>
+        <!-- Google Map Initialization -->
+        <script>
+            var map, marker;
 
-        function initMap() {
-            var location = {
-                lat: 6.839325,
-                lng: 79.917595
-            };
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: location,
-                zoom: 15
-            });
+            function initMap() {
+                var location = {
+                    lat: 6.839325,
+                    lng: 79.917595
+                };
+                map = new google.maps.Map(document.getElementById('map'), {
+                    center: location,
+                    zoom: 15
+                });
 
-            marker = new google.maps.Marker({
-                position: location,
-                map: map,
-                title: 'TDK Architects'
-            });
-        }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmeLxO_ARD4U2zAWM096TZlOQYy0PQXt0&callback=initMap" async
-        defer></script>
-</body>
+                marker = new google.maps.Marker({
+                    position: location,
+                    map: map,
+                    title: 'TDK Architects'
+                });
+            }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmeLxO_ARD4U2zAWM096TZlOQYy0PQXt0&callback=initMap" async
+            defer></script>
+    </body>
 
 </html>

@@ -27,7 +27,6 @@
     /*----- Clients Section -----*/
     $(document).ready(function () {
         $("#clients").owlCarousel({
-            
             loop: true,
             singleItem: true,
             autoplay: true,
@@ -37,7 +36,7 @@
             autoplayHoverPause: false,
             dots: false,
             responsive:{
-                0:{items:2},
+                0:{items:1.5},
                 1200:{items:3}
             }
         });
