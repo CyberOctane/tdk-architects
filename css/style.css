@@ -170,6 +170,7 @@ a {
     -o-transition: all 0.35s;
     transition: all 0.35s;
     color: #ffffff;
+    text-decoration: none;
 }
 
 a:focus,
@@ -256,7 +257,7 @@ body {
 
 .container {
     width: 100%;
-    padding: ;
+    padding: 0;
     overflow: hidden;
 }
 
@@ -450,7 +451,14 @@ body {
    ----------------------------------------------------- 5. Side-Menu Styling ------------------------------------------------------
    --------------------------------------------------------------------------------------------------------------------------------- */
 
-.side-nav {
+   #hamMenu hr {
+    -webkit-transition: width 0.5s;
+    -moz-transition: width 0.5s;
+    -o-transition: width 0.5s;
+    transition: width 0.5s;
+}
+
+   .side-nav {
     height: 100%;
     width: 0;
     position: fixed;
@@ -468,15 +476,6 @@ body {
     transition: all 0.5s;
 }
 
-.side-nav a {
-    color: #000000;
-    text-decoration: none;
-}
-
-.side-nav a:hover {
-    color: #fff;
-}
-
 .side-nav-items {
     position: absolute;
     overflow: hidden;
@@ -486,25 +485,22 @@ body {
     width: 90%;
 }
 
-.side-nav .side-nav-items ul {
-    padding: 0;
-}
-
-.side-nav .side-nav-items a,
-.side-nav .side-nav-items a:focus {
+.side-nav-items a,
+.side-nav-items a:focus {
     padding: 10px 10px 10px 10px;
     font-size: 30px;
     font-weight: 400;
     color: #000000;
-    display: block;
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -o-transition: all 0.2s;
-    transition: all 0.2s;
+    display: inline;
+    text-decoration: none;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
 }
 
-.side-nav .side-nav-items a:hover,
-.side-nav .side-nav-items a:focus:hover {
+.side-nav-items a:hover,
+.side-nav-items a:focus:hover {
     font-weight: 900;
 }
 
@@ -512,13 +508,19 @@ body {
     font-size: 10vw;
 }
 
-.side-nav .btn-close {
+.btn-close {
     position: absolute;
     top: 45px;
     right: 32px;
     font-size: 45px;
     font-weight: 100;
     cursor: pointer;
+    color: black;
+}
+
+.btn-close:hover {
+    text-decoration: none;
+    color: black;
 }
 
 /* ----------- Desktops and laptops ----------- */
@@ -527,40 +529,49 @@ body {
     #hamMenu .wow {
         display: flex;
         align-items: center;
-        background-color: aquamarine;
+        /* background-color: aquamarine; */
         width: 90vw;
         overflow: hidden;
     }
     #hamMenu .wow div {
         flex-shrink: 0;
         width: 45vw;
-        background-color: aliceblue
+        /* background-color: aliceblue; */
     }
-    #hamMenu .wow hr {
-        margin-left: 0vw;
-        border-width: 0.3em;
-        width: 45vw;
+    #hamMenu hr {
+        margin-left: 2.5vw;
+        border-width: 0.2em;
+        width: 0;
         border-color: black;
     }
-    .side-nav .side-nav-items a,
-    .side-nav .side-nav-items a:focus {
+    .side-nav-items a,
+    .side-nav-items a:focus {
         padding: 1px;
         font-size: 4.7vw;
     }
-    .side-nav .side-nav-items .menu-sub-sec {
+    .nav-item {
+        margin: 0.5vh 0;
+    }
+    .side-nav-items .menu-sub-sec {
         font-size: 200%;
         font-weight: 600;
+        visibility: hidden;
         display: none;
+        opacity: 0;
+        -webkit-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        transition: all 0.4s;
     }
-    
     #side-nav-li-2:hover .menu-sub-sec {
+        visibility: visible;
+        opacity: 1;
         display: block;
     }
-    .side-nav .btn-close {
+    .btn-close {
         top: 10px;
         right: 90px;
         font-size: 10vw;
-        cursor: pointer;
     }
 }
 
