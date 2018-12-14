@@ -592,15 +592,15 @@ body {
 }
 
 #hero-section-1 {
-    background-image: url(../img/header_01.jpg);
+    background-image: url(../img/header_01_1920x1080.jpg);
 }
 
 #hero-section-2 {
-    background-image: url(../img/header_02.jpg);
+    background-image: url(../img/header_02_1920x1080.jpg);
 }
 
 #hero-section-3 {
-    background-image: url(../img/header_03.jpg);
+    background-image: url(../img/header_03_1920x1080.jpg);
 }
 
 .hero-section-inner {
@@ -635,12 +635,6 @@ body {
     padding: 0;
     text-decoration: none;
 }
-
-/* .section h1 {
-    text-align: center;
-    color: #ffffff;
-    font-size: 3em;
-} */
 
 @media (min-width: 226px) {
     .navbar-right {
