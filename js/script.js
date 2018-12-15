@@ -50,6 +50,7 @@ function sideMenuWidthReset() {
     document.getElementById('side-menu').style.width = '0%';
 }
 
+/*
 window.onresize = function (event) {
     applyOrientation();
 }
@@ -65,6 +66,8 @@ function applyOrientation() {
         document.getElementById('info-container').classList.add('col-xs-4');
     }
 }
+*/
+
 /*function carouselWowAnimation() {
     if (document.getElementById('1').classList.contains(animated)) {
         document.getElementById('1').classList.add('fadeInRight');
@@ -72,3 +75,38 @@ function applyOrientation() {
         document.getElementById('1').classList.add('animated');
     }
 }*/
+
+
+var navItems = document.getElementsByClassName('nav-item');
+var id;
+
+// Home Nav Link
+navItems[0].getElementsByTagName('A')[0].addEventListener('mouseenter', expandHrLine);
+navItems[0].getElementsByTagName('A')[0].addEventListener('mouseleave', shirnkHrLine);
+// About Us Nav Link
+navItems[1].getElementsByTagName('A')[0].addEventListener('mouseenter', expandHrLine);
+navItems[1].getElementsByTagName('A')[0].addEventListener('mouseleave', shirnkHrLine);
+
+navItems[1].getElementsByTagName('A')[1].addEventListener('mouseenter', expandHrLine);
+navItems[1].getElementsByTagName('A')[1].addEventListener('mouseleave', shirnkHrLine);
+// Services Nav Link
+navItems[2].getElementsByTagName('A')[0].addEventListener('mouseenter', expandHrLine);
+navItems[2].getElementsByTagName('A')[0].addEventListener('mouseleave', shirnkHrLine);
+// Portfolio Nav Link
+navItems[3].getElementsByTagName('A')[0].addEventListener('mouseenter', expandHrLine);
+navItems[3].getElementsByTagName('A')[0].addEventListener('mouseleave', shirnkHrLine);
+// Contact Us Nav Link
+navItems[4].getElementsByTagName('A')[0].addEventListener('mouseenter', expandHrLine);
+navItems[4].getElementsByTagName('A')[0].addEventListener('mouseleave', shirnkHrLine);
+
+function expandHrLine(evt) {
+    id = evt.target.parentNode.nextElementSibling.id;
+    // console.log(id);
+    document.getElementById(id).style.width = '40vw';
+}
+
+function shirnkHrLine(evt) {
+    id = evt.target.parentNode.nextElementSibling.id;
+    // console.log(id);
+    document.getElementById(id).style.width = '0';
+}

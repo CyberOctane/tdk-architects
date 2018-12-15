@@ -31,7 +31,7 @@
 
     <!-- All Plugins CSS -->
     <!-- Fullpage.js CSS -->
-    <link rel="stylesheet" type="text/css" href="./vendor/fullpage-js/css/jquery.fullPage.css">
+    <link rel="stylesheet" type="text/css" href="./vendor/fullpage-js/v2/css/jquery.fullPage.css">
     <!-- Animate.css CSS -->
     <link rel="stylesheet" type="text/css" href="./vendor/animate.css/animate.css">
     <!-- Owl Carousel CSS -->
@@ -89,36 +89,36 @@
         <a class="btn-close" onclick="closeSlideMenu()">&times;</a>
         <div class="side-nav-items">
             <div id="hamMenu">
-                <div id="side-nav-li-1" class="wow" data-wow-delay="0s" data-menuanchor="firstPage" >
+                <div id="side-nav-li-1" class="wow nav-item" data-wow-delay="0s" data-menuanchor="firstPage">
                     <div>
                         <a href="#firstPage" onclick="closeSlideMenu()">HOME</a>
                     </div>
-                    <hr>
+                    <hr id="side-nav-li-1-hr">
                 </div>
-                <div id="side-nav-li-2" class="wow" data-wow-delay="0.1s" data-menuanchor="secondPage">
+                <div id="side-nav-li-2" class="wow nav-item" data-wow-delay="0.1s" data-menuanchor="secondPage">
                     <div>
                         <a href="#secondPage" onclick="closeSlideMenu()">ABOUT US</a>
                         <a class="menu-sub-sec" href="team.html" onclick="closeSlideMenu()">SEE THE TEAM</a>
                     </div>
-                    <hr>
+                    <hr id="side-nav-li-2-hr">
                 </div>
-                <div id="side-nav-li-3" class="wow" data-wow-delay="0.2s" data-menuanchor="3rdPage">
+                <div id="side-nav-li-3" class="wow nav-item" data-wow-delay="0.2s" data-menuanchor="3rdPage">
                     <div>
                         <a href="#3rdPage" onclick="closeSlideMenu()">SERVICES</a>
                     </div>
-                    <hr>
+                    <hr id="side-nav-li-3-hr">
                 </div>
-                <div id="side-nav-li-4" class="wow" data-wow-delay="0.3s" data-menuanchor="4thPage">
-                    <div>    
+                <div id="side-nav-li-4" class="wow nav-item" data-wow-delay="0.3s" data-menuanchor="4thPage">
+                    <div>
                         <a href="#4thPage" onclick="closeSlideMenu()">PORTFOLIO</a>
                     </div>
-                    <hr>
+                    <hr id="side-nav-li-4-hr">
                 </div>
-                <div id="side-nav-li-5" class="wow" data-wow-delay="0.4s" data-menuanchor="5thPage">
+                <div id="side-nav-li-5" class="wow nav-item" data-wow-delay="0.4s" data-menuanchor="5thPage">
                     <div>
                         <a href="#5thPage" onclick="closeSlideMenu()">CONTACT US</a>
                     </div>
-                    <hr>
+                    <hr id="side-nav-li-5-hr">
                 </div>
             </div>
         </div>
@@ -131,7 +131,7 @@
             <div class="hero owl-carousel owl-theme">
                 <div class="hero-section" id="hero-section-1">
                     <div class="container">
-                        <div id="1" class="hero-section-inner wow" data-wow-delay="0.1s">
+                        <div class="hero-section-inner">
                             <h2>Bricksgate Apartment</h2>
                             <h3>Wattala</h3>
                             <hr>
@@ -142,9 +142,9 @@
                 </div>
                 <div class="hero-section" id="hero-section-2">
                     <div class="container">
-                        <div class="hero-section-inner wow fadeInRight" data-wow-delay="0.1s">
-                            <h2>Bricksgate Apartment</h2>
-                            <h3>Wattala</h3>
+                        <div class="hero-section-inner">
+                            <h2>Aqua Vista Apartment</h2>
+                            <h3>Galle</h3>
                             <hr>
                             <a href="#contact">see more about this project</a>
                             <hr>
@@ -153,7 +153,7 @@
                 </div>
                 <div class="hero-section" id="hero-section-3">
                     <div class="container">
-                        <div class="hero-section-inner wow fadeInRight" data-wow-delay="0.1s">
+                        <div class="hero-section-inner">
                             <h2>Bricksgate Apartment</h2>
                             <h3>Wattala</h3>
                             <hr>
@@ -180,8 +180,14 @@
                         <hr class="blkhr lgonly">
                         <div class="textbox">
                             <p class="bodytext">
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.<span> Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
-                                consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                                tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+                                quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+                                consequat.<span> Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
+                                    molestie
+                                    consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et
+                                    iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore
+                                    te feugait nulla facilisi.
                                 </span>
                             </p>
                         </div>
@@ -238,7 +244,8 @@
                             </div>
                             <div class="expnd">
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                                    euismod tincidunt ut laoreet dolore magna
                                     aliquamerat volutpat. Ut wisi enim ad minim veniam.
                                 </p>
                                 <div class="servicedetails">
@@ -277,7 +284,8 @@
                             </div>
                             <div class="expnd">
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                                    euismod tincidunt ut laoreet dolore magna
                                     aliquamerat volutpat. Ut wisi enim ad minim veniam.
                                 </p>
                                 <div class="servicedetails">
@@ -310,13 +318,14 @@
                         <div class="hovexp">
                             <div class="topspace">
                             </div>
-                            <div class="servicestitle" style="">
+                            <div class="servicestitle">
                                 <h1>WE MAKE
                                     <br>BRANDS</h1>
                             </div>
                             <div class="expnd">
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                                    euismod tincidunt ut laoreet dolore magna
                                     aliquamerat volutpat. Ut wisi enim ad minim veniam.
                                 </p>
                                 <div class="servicedetails">
@@ -486,21 +495,23 @@
             </div>
             <div class="footer text-center">
                 <p>Designed & Developed with &nbsp;
-                <span><i class="fa fa-heart"></i></span>
-                &nbsp; by TDK Illusions</p>
+                    <span><i class="fa fa-heart"></i></span>
+                    &nbsp; by TDK Illusions</p>
             </div>
             <!-- Contact Us End -->
         </div>
         <!-- jQuery CDN -->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        <script src="./vendor/jquery/jquery.min.js"></script>
+        <!-- <script src="./vendor/jquery/jquery.min.js"></script> -->
 
         <!-- Bootstrap Core JavaScript -->
         <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
 
         <!-- Plugin JavaScript -->
+        <!-- scrolloverflow -->
+        <script src="./vendor/fullpage-js/v2/js/scrolloverflow.js"></script>
         <!-- Fullpage.js -->
-        <script src="./vendor/fullpage-js/js/jquery.fullPage.js"></script>
+        <script src="./vendor/fullpage-js/v2/js/jquery.fullPage.js"></script>
         <!-- jQuery Easing -->
         <script src="./vendor/jquery.easing/jquery.easing.js"></script>
         <!-- wow.js -->
@@ -533,8 +544,8 @@
                 });
             }
         </script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmeLxO_ARD4U2zAWM096TZlOQYy0PQXt0&callback=initMap" async
-            defer></script>
-    </body>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmeLxO_ARD4U2zAWM096TZlOQYy0PQXt0&callback=initMap"
+            async defer></script>
+</body>
 
 </html>
