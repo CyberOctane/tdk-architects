@@ -9,6 +9,28 @@ p {
     line-height: 1.3em;
 }
 
+.page-heading {
+        display: ;
+        align-items: center;
+        height: ;
+        padding: 5vw;
+    }
+
+#proj-dtail {
+        padding: 1vh 0 1vh 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+#proj-dtail div {
+        padding: 0.5vh 0;
+    }
+
+.full img{
+    width: 100%;
+}
+
 /* Project page for desktop */
 
 @media (min-width:1200px) {
@@ -17,12 +39,17 @@ p {
         display: flex;
         align-items: center;
         height: 25vh;
+        padding: 0vw;
     }
     
     #project {
         display: flex;
         justify-content: space-between;
         background-color: ;
+    }
+    
+    .sm-only {
+        display: none;
     }
         
     #proj-dtail {
@@ -43,7 +70,7 @@ p {
     }
     
     .prjct-desc p {
-        font-size: 16px;
+        font-size: 0.9vw;
         font-weight: 300;
     }
         

@@ -186,6 +186,13 @@ hr {
     margin: 5px 0;
 }
 
+
+.blkhr {
+    border-color: rgb(0, 0, 0);
+    border-width: 1px;
+    margin: 0;
+}
+
 /**** heading sections of pages ****/
 .page-heading {
     padding: 0.8em 0 ;
@@ -197,16 +204,17 @@ hr {
 }
 .page-heading h2 {
     font-weight: 400;
-    font-size: 6vw;
+    font-size: 5vw;
+    padding: 1vh 0;
 }
 .page-heading .details-1 {
     font-weight: 900;
-    font-size: 130%;
+    font-size: 110%;
     line-height: 1em;
 }
 .page-heading .details-2 {
     font-weight: 600;
-    font-size: 100%;
+    font-size: 90%;
     line-height: 1em;
 }
 
@@ -270,12 +278,6 @@ body {
 .no-padding {
     padding: 0 !important;
     margin: 0 !important;
-}
-
-.blkhr {
-    border-color: rgb(0, 0, 0);
-    border-width: 1px;
-    margin: 0;
 }
 
 .imgbox {
@@ -1072,7 +1074,8 @@ body {
     margin: 9vh auto;
     height: 80vh;/*150vw; /* set to keep 1:2 ratio of boxes + middle section height */
     width: 86%;
-    background-color:red ;
+    max-height: 680px;
+    background-color: ;
 }
 .nested-items {
     display: grid;
@@ -1096,7 +1099,7 @@ body {
     max-width: 120%;
 }
 .horizontal-box {
-    height: 15vh;
+    height: ;
     width: 100%;
     background-color: aqua;
 }
@@ -1105,6 +1108,12 @@ body {
     width: 30vw;
     background-color: aqua;
 }
+
+.vertical-box img {
+    min-height: 100%;
+    max-width: 120%;
+}
+
 .grid-item-inner {
     position: relative;
     height: 100%;
@@ -1168,8 +1177,8 @@ body {
 #item-7 {
     grid-column: 1/7;
     grid-row: 3/5;
-    background: rgba(240, 95, 64, 0.9) !important;
-    height: 10vh;
+    background-color: aqua;
+    height: 16vh;
     width: 100%;
     overflow: hidden;
 }
@@ -1181,7 +1190,7 @@ body {
     right: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 0.8);
     opacity: 1;
     display: flex;
     align-items: center;
@@ -1207,10 +1216,11 @@ body {
 
 /* Projects section for desktop */
 
-@media (min-width:1200px) {
+@media (min-width:992px) {
     .grid-container {
         margin: auto ;
         height: 80vh; /* set to keep 1:2 ratio of boxes + middle section height */
+        max-height: none;
         width: 86%;
         background-color: ;
         grid-column-gap: 0vh;
@@ -1273,7 +1283,7 @@ body {
 }
 
 
-/* ----------- Large screens ----------- */
+/* ----------- Large screens ----------- 
 
 @media only screen and (min-width: 1824px) {
     .horizontal-box {
@@ -1283,7 +1293,7 @@ body {
         height: 28vw;
     }
 }
-
+*/
 /* ---------------------------------------------------------------------------------------------------------------------------------
    ----------------------------------------------------- 8. Contact-Us Styling -----------------------------------------------------
    --------------------------------------------------------------------------------------------------------------------------------- */

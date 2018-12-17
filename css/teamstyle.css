@@ -3,8 +3,7 @@
 .team-grid {
     padding: 0 10vw;
     width: 100%;
-    
-        margin-top: 7.5vh;
+    margin-top: 7.5vh;
 }
 
 .page-heading {
@@ -53,7 +52,8 @@
     }
     
     .page-heading {
-    font-size: 4vw;
+        font-size: 4vw;
+        padding: 1em 0 1em 0 ;
     }
     
     .team-member {
