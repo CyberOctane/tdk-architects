@@ -1,0 +1,63 @@
+/* ----------- Smartphones (Portrait & Landscape) ----------- */
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+    .navbar-default.past-main {
+        height: 7.5vh;
+    }
+    .navbar-default .navbar-offset {
+        margin-top: 10px;
+    }
+    .navbar-default.past-main .navbar-offset {
+        margin-top: 0;
+    }
+    .navbar-default .navbar-offset .navbar-header .navbar-brand {
+        -ms-transform: scale(0.6);
+        -webkit-transform: scale(0.6);
+        transform: scale(0.6);
+    }
+}
+
+/* ----------- Smartphones (Portrait) ----------- */
+
+@media only screen and (min-width: 320px) and (max-width: 768px) and (orientation: portrait) {
+    .navbar-default .navbar-offset .hamburger-menu {
+        padding-top: 15px;
+    }
+    .navbar-default.past-main .navbar-offset .hamburger-menu {
+        padding-top: 10px;
+    }
+}
+
+/* ----------- Tabs (Portrait & Landscape) ----------- */
+
+@media only screen and (min-width: 768px) {
+    .navbar-default .navbar-offset .hamburger-menu {
+        margin-right: 0;
+    }
+}
+
+/* 
+===========================================================
+================ iPhone 5 / 5S / 5C / 5SE =================
+===========================================================
+*/
+
+/* ------------ Landscape ------------ */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    .navbar-default.past-main {
+        height: 55px;
+    }
+}
+
+/* .navbar-default .navbar-nav>li>a,
+.navbar-default .navbar-nav>li>a:focus {
+    color: #ffffff;
+    font-size: 25px;
+}
+
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus:hover {
+    stroke: #f5d010;
+} */
+
