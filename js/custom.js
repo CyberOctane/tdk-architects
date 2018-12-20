@@ -49,17 +49,10 @@
         // we round here to reduce a little workload
         stop = Math.round($(window).scrollTop());
         if (stop > mainbottom) {
-            $('#mainNav').addClass('past-main');
+            $('#main-nav').addClass('past-main');
         } else {
-            $('#mainNav').removeClass('past-main');
+            $('#main-nav').removeClass('past-main');
         }
     });
-
-    // Offset for Main Navigation
-    // $('#mainNav').affix({
-    //     offset: {
-    //         top: 8000
-    //     }
-    // });
 
 })(jQuery);
