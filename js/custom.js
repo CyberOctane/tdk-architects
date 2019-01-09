@@ -26,8 +26,9 @@
     
     /*----- Clients Section -----*/
     $(document).ready(function () {
-        $("#clients").owlCarousel({
+        $("#clients-list-mobile").owlCarousel({
             loop: true,
+            margin:10,
             singleItem: true,
             autoplay: true,
             autoHeight: true,
@@ -36,8 +37,27 @@
             autoplayHoverPause: false,
             dots: false,
             responsive:{
-                0:{items:1.5},
-                1200:{items:3}
+                0:{items:3},
+                481:{items:4},
+                639:{items:6},
+                767:{items:5}
+            }
+        });
+    });
+
+    $(document).ready(function () {
+        $("#clients-list-desktop").owlCarousel({
+            loop: true,
+            margin:10,
+            singleItem: true,
+            autoplay: true,
+            autoHeight: true,
+            autoplayTimeout: 3000,
+            smartSpeed: 1000,
+            autoplayHoverPause: false,
+            dots: false,
+            responsive:{
+                992:{items:3}
             }
         });
     });
