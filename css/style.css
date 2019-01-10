@@ -30,7 +30,7 @@ a {
     -o-transition: all 0.35s;
     transition: all 0.35s;
     color: #ffffff;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 a:focus,
@@ -1356,249 +1356,250 @@ hr {
    9. Contact-Us Styling
    ========================================================================== */
 
-#map-holder {
-    margin-top: 7vh;
-    padding: 0;
+#contact-us h1 {
+    color: black;
+    font-weight: 900;
+    line-height: 1;
 }
 
-#map {
-    height: 50vh;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
+#contact-us p {
+    margin-bottom: 0;
+    color: black;
 }
 
-#info-container {
+#contact-us hr {
+    border-width: 2px;
+}
+
+#google-map {
+    height: 100%;
+}
+
+.contact-us-main-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    height: 35vh;
-    padding: 2vw 7vw;
+    height: 85vh;
 }
 
-#info-container hr {
-    width: 100%;
-    border-color: rgb(0, 0, 0);
-    border-width: 1px;
-    margin: 0;
+.map-container {
+    height: 50%;
+    background-color: rgb(0, 255, 106);
 }
 
-.hr-top {
-    display: none;
+.contact-us-details-container {
+    height: 50%;
+    padding: 0 5%;
 }
 
-#info-container h1 {
-    color: #000000;
-    font-weight: 900;
-    font-size: 7vw;
-    text-transform: uppercase;
-    line-height: 1;
-    margin: 0;
-}
-
-#info-container p {
-    font-family: 'Roboto Condensed', sans-serif;
-    color: #000000;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.2;
-    margin: 0;
-}
-
-.location {
-    padding: 10px 0;
-    height: auto;
-    position: relative;
+.locate-us-main-container {
+    height: 50%;
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 }
 
-.locate-us h1 {
-    font-size: 5vw;
-}
-
-.getting-touch {
+.get-in-touch-main-container {
+    height: 50%;
     display: flex;
     flex-direction: row-reverse;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+}
+
+.get-in-touch-details {
     text-align: right;
-    width: 100%;
-    padding: 0;
-}
-
-.get-in-touch {
-    padding: 0;
-}
-
-.contact-social {
-    padding: 4vw 0;
-    float: left;
 }
 
 .social-media-icons {
-    padding: 3vw 0 0 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    font-size: 22px;
+    padding-top: 10px;
 }
 
 .social-media-icons a,
 .social-media-icons a:focus {
-    font-size: 5vw;
-    color: #000000;
-    padding-right: 0;
-    text-decoration: none;
+    color: black;
 }
 
 .social-media-icons a:hover,
-.social-media-icons a:hover:focus {
+.social-media-icons a:focus:hover {
     color: #f5d010;
 }
 
-#contact-us .footer p {
-    font-size: 10px;
+.footer {
+    position: absolute;
+    width: 100%;
+    bottom: 3%;
+}
+
+.footer p {
+    text-align: center;
+    font-size: 8px !important;
 }
 
 .footer i {
     color: #f5d010;
 }
 
-@media (min-width:768px) {
+/* ----------- Mobile (Portrait) ----------- */
 
-    .map-inner {
-        margin-top: 8vh;
-        padding-left: 0;
-        height: 80vh;
-        width: 86%;
+@media (min-width: 320px) and (max-width: 480px) {
+    #contact-us h1 {
+        font-size: 30px;
     }
 
-    .map-inner .row {
-        display: flex;
-        flex-direction: row;
-        height: 100%;
+    #contact-us p {
+        font-size: 15px;
+        line-height: 1.4;
     }
 
-    #map-holder {
-        margin-top: 0;
-        padding-right: 1vw;
+    .social-media-icons a {
+        font-size: 22px;
+        padding-left: 18px;
+    }
+}
+
+/* ----------- Mobile (Landscape) ----------- */
+
+@media (min-width: 481px) and (max-width: 991px) and (orientation: landscape) {
+
+    #contact-us h1 {
+        font-size: 35px;
     }
 
-    #map {
-        width: 100%;
-        height: 100%;
-    }
-
-    #info-container {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-between;
-        height: 100%;
-        padding: 0 0 0 2vw;
-    }
-
-    #info-container hr {
-        width: 100%;
-        border-color: rgb(0, 0, 0);
-        border-width: 3px;
-        margin: 0;
-        /* margin-left: 15px;
-        margin-right: 15px; */
-    }
-
-    .hr-top,
-    .hr-bottom {
-        display: block;
-    }
-
-    #info-container h1 {
-        color: #000000;
-        font-weight: 900;
-        font-size: 3.4vw;
-        text-align: left;
-        text-transform: uppercase;
-        line-height: 0.9;
-    }
-
-    #info-container p {
-        font-family: 'Roboto Condensed', sans-serif;
-        color: #000000;
-        font-weight: 400;
-        font-size: 17px;
+    #contact-us p {
+        font-size: 14px;
         line-height: 1.3;
     }
 
-    .location {
-        height: auto;
-        position: relative;
-        flex-direction: column;
-        align-items: flex-start;
+    .contact-us-main-container {
+        height: 85vw;
+    }
+
+    .contact-us-details-container {
+        height: 40%;
+        padding: 0 40px;
+    }
+
+    .locate-us-main-container {
         justify-content: space-around;
     }
 
-    .locate-us h1 {
-        font-size: 5vw;
+    .get-in-touch-main-container {
+        justify-content: space-around;
     }
 
-    .address {
-        padding: 10% 0 0 0;
-        /* padding-left: 4vh;*/
+    .social-media-icons a {
+        font-size: 25px;
+        padding-left: 18px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    .social-media-icons a {
+        padding-left: 18px;
+    }
+}
+
+/* ----------- Tablets (Portrait) ----------- */
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+
+    #contact-us h1 {
+        font-size: 45px;
     }
 
-    .getting-touch {
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-between;
-        text-align: left;
-        width: 100%;
+    #contact-us p {
+        font-size: 18px;
     }
 
-    .get-in-touch {
-        padding: 0;
+    .contact-us-details-container {
+        padding: 0 15%;
     }
 
-    .contact-social {
-        width: inherit;
-        padding: 3vh 0 0 0;
-        float: left;
+    .social-media-icons a {
+        font-size: 30px;
+        padding-left: 18px;
     }
 
-    .social-media-icons {
-        padding: 3vh 0 0 0;
-        display: flex;
+    .footer p {
+        font-size: 12px !important;
+    }
+}
+
+/* ----------- Tablets (Landscape) ----------- */
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+    .contact-us-main-container {
+        height: 85vw;
+    }
+
+    .contact-us-details-container {
+        height: 45%;
+    }
+
+    .footer p {
+        font-size: 10px !important;
+    }
+}
+
+@media (min-width:992px) {
+
+    #contact-us h1 {
+        font-size: 3vw;
+    }
+
+    #contact-us p {
+        font-size: 1.1vw;
+        line-height: 1.3;
+    }
+
+    .contact-us-main-container {
+        flex-direction: row;
+        flex-wrap: wrap;
         align-items: center;
+        height: 80vh;
+        width: 86%;
+        margin: auto;
+    }
+
+    .map-container {
+        height: 100%;
+        flex-basis: 80%;
+    }
+
+    .contact-us-details-container {
+        height: 100%;
+        flex-basis: 20%;
         justify-content: space-between;
+        padding: 0 0 0 2.5%;
     }
 
-    .social-media-icons a,
-    .social-media-icons a:focus {
-        font-size: 150%;
-        color: #000000;
-        text-decoration: none;
-        padding-right: 15px;
+    .locate-us-main-container {
+        height: 45%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
     }
 
-    .social-media-icons a:hover,
-    .social-media-icons a:hover:focus {
-        color: #f5d010;
+    .get-in-touch-main-container {
+        height: 55%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
     }
 
-    .footer {
-        height: auto;
-        padding: 30px 7vw;
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
+    .get-in-touch-details {
+        text-align: left;
     }
 
-    #contact-us .footer p {
-        font-size: 13px;
+    .social-media-icons a {
+        font-size: 2vw;
+        padding-right: 6%;
     }
 
-    .footer i {
-        color: #f5d010;
+    .footer p {
+        font-size: 9px !important;
     }
-
 }
