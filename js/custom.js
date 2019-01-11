@@ -1,6 +1,14 @@
 (function ($) {
     "use strict"; // Start of use strict
 
+    /*-------- Loading Section ----------*/
+
+    $(window).on("load", function () {
+        $("#loader").fadeOut("slow", function () {
+            $(this).remove();
+        });
+    });
+
     /* --------- Wow Init ------ */
     new WOW().init();
 
@@ -23,12 +31,12 @@
             touchDrag: false
         });
     });
-    
+
     /*----- Clients Section -----*/
     $(document).ready(function () {
         $("#clients-list-mobile").owlCarousel({
             loop: true,
-            margin:10,
+            margin: 10,
             singleItem: true,
             autoplay: true,
             autoHeight: true,
@@ -36,11 +44,19 @@
             smartSpeed: 1000,
             autoplayHoverPause: false,
             dots: false,
-            responsive:{
-                0:{items:3},
-                481:{items:4},
-                639:{items:6},
-                767:{items:5}
+            responsive: {
+                0: {
+                    items: 3
+                },
+                481: {
+                    items: 4
+                },
+                639: {
+                    items: 6
+                },
+                767: {
+                    items: 5
+                }
             }
         });
     });
@@ -48,7 +64,7 @@
     $(document).ready(function () {
         $("#clients-list-desktop").owlCarousel({
             loop: true,
-            margin:10,
+            margin: 10,
             singleItem: true,
             autoplay: true,
             autoHeight: true,
@@ -56,8 +72,10 @@
             smartSpeed: 1000,
             autoplayHoverPause: false,
             dots: false,
-            responsive:{
-                992:{items:3}
+            responsive: {
+                992: {
+                    items: 3
+                }
             }
         });
     });
