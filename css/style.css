@@ -20,6 +20,7 @@ h6 {
 }
 
 p {
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 15px;
     line-height: 1.5;
 }
@@ -177,7 +178,7 @@ hr {
    3. Loader Styling
    ========================================================================== */
 
-   #loader {
+#loader {
     height: 100vh;
     width: 100%;
     display: flex;
@@ -626,15 +627,15 @@ hr {
 }
 
 #hero-section-1 {
-    background-image: url(../img/header_01_1920x1080.jpg);
+    background-image: url(../img/header_section/header_01_1920x1080.jpg);
 }
 
 #hero-section-2 {
-    background-image: url(../img/header_02_1920x1080.jpg);
+    background-image: url(../img/header_section/header_02_1920x1080.jpg);
 }
 
 #hero-section-3 {
-    background-image: url(../img/header_03_1920x1080.jpg);
+    background-image: url(../img/header_section/header_03_1920x1080.jpg);
 }
 
 .hero-section-inner {
@@ -736,7 +737,7 @@ hr {
 
 .img {
     height: 100%;
-    background-image: url(../img/about_us/studio-bnw.jpg);
+    background-image: url(../img/about_us_section/studio-bnw.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -783,7 +784,6 @@ hr {
 }
 
 .about-description p {
-    font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
     line-height: 18px;
     padding-top: 10px;
@@ -967,6 +967,7 @@ hr {
 }
 
 @media (min-width:992px) and (max-width:1024px) {
+
     .block-1 h1,
     .block-2 h1 {
         font-size: 6vh;
@@ -988,7 +989,7 @@ hr {
 /* ----------- iPad Pro (Landscape) ----------- */
 
 @media only screen and (min-device-width: 1025px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-    
+
     .block-1 h1,
     .block-2 h1 {
         font-size: 4.5vw;
@@ -1022,193 +1023,305 @@ hr {
    8. Services Styling
    ========================================================================== */
 
-/* ----------- Mobile ----------- */
-
-#services .container {
-    margin-top: 7.5vh;
+.desktop-only {
+    display: none;
 }
 
-.services {
-    height: 30.83vh;
-}
-
-.services img {
-    filter: grayscale(100%)
-}
-
-.img-box {
-    overflow: hidden;
-    padding: 0;
-    margin: 0;
-}
-
-.img-box img {
-    min-width: 100%;
-    max-height: 201%
-}
-
-.overlay {
-    background-color: black;
-    height: inherit;
-    width: 100%;
-    position: absolute;
-    z-index: 1;
-    opacity: 0.7;
-    mix-blend-mode: multiply;
-}
-
-.hovexp {
-    width: 100%;
-    height: inherit;
-    position: absolute;
-    z-index: 2;
+.services-main-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 85vh;
 }
 
-.servicestitle {
-    position: relative;
-    height: 100%;
-    width: 50%;
-    padding-left: 10vw;
-    float: left;
-    display: flex;
-    align-items: center;
-}
-
-.servicestitle h1 {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 900;
-    font-size: 6vw;
-    color: white;
-    line-height: 90%;
-    text-align: left;
-    float: left;
-}
-
-.expnd {
-    height: 100%;
-    width: 50%;
-    padding: 0vh 0;
-    margin: auto;
+.service-category {
+    height: 33%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
-.servicedetails {
+#service-category-1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/services_section/we-design.jpg);
+}
+
+#service-category-2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/services_section/we-visualize.jpg);
+}
+
+#service-category-3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/services_section/we-make-brands.jpg);
+}
+
+.service-category-inner {
+    height: 90%;
+    display: flex;
+    align-items: center;
+    margin: 0 8%;
+    color: #ffffff;
+}
+
+.category-heading {
+    width: 50%;
+}
+
+.category-heading h1 {
+    font-size: 29px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.category-details {
+    width: 50%;
+}
+
+.category-sub-sections {
     width: 100%;
-    padding: 0.8vh 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
-.hovexp h2 {
+.category-sub-heading {
     font-family: 'Roboto Condensed', sans-serif;
+    font-size: 12px;
     font-weight: 700;
-    color: white;
-    margin: 3% 0;
-    font-size: 90%;
-    float: left
 }
 
-.hovexp p {
-    display: none
-}
+@media (min-width:320px) and (max-width: 824px) and (orientation:portrait) {
 
-.topspace {
-    height: 0%;
-    width: 0%;
-    background-color: red;
-}
-
-/* ----------- Desktops and Laptops ----------- */
-
-@media (min-width: 1281px) {
-    #services .container {
-        margin-top: 0;
+    .category-details {
+        height: 90%;
     }
 
-    .services {
+    .category-sub-sections {
+        height: 100%;
+    }
+}
+
+@media (min-width:320px) and (max-width: 824px) and (orientation:landscape) {
+
+    .services-main-container {
+        flex-direction: row;
+        height: 120vh;
+    }
+
+    .service-category {
+        height: 100%;
+        width: 33%;
+    }
+
+    .service-category-inner {
+        height: 65%;
+        flex-direction: column;
+    }
+
+    .category-heading {
+        width: 90%;
+        height: 30%;
+        padding-bottom: 5%;
+        border-bottom: 1px solid white;
+    }
+
+    .category-details {
+        width: 90%;
+        height: 70%;
+    }
+
+    .category-sub-sections {
+        width: 100%;
+        height: 100%;
+        padding-top: 25%;
+    }
+}
+
+@media (min-width:824px) and (max-width: 1366px) and (orientation:portrait) {
+
+    .category-heading h1 {
+        font-size: 50px;
+    }
+
+    .category-details {
+        height: 90%;
+    }
+
+    .category-sub-sections {
+        height: 100%;
+    }
+
+    .category-sub-heading {
+        font-size: 22px;
+    }
+}
+
+@media (min-width:824px) and (max-width: 1366px) and (orientation:landscape) {
+
+    .desktop-only {
+        display: block;
+    }
+
+    .services-main-container {
+        flex-direction: row;
         height: 80vh;
     }
 
-    .expnd {
-        height: 0;
-        width: 60%;
-        padding: 0;
-        margin: 0 auto;
-        overflow: hidden;
-        display: block;
-        transition: 0.4s ease;
-        transform-origin: bottom;
+    .service-category {
+        height: 100%;
+        width: 33%;
     }
 
-    .servicestitle {
-        height: 8vw;
-        width: 60%;
-        margin: 0 auto;
-        padding: 0;
-    }
-
-    .servicestitle h1 {
-        font-size: 4vw;
-        line-height: 90%;
-        text-align: center;
-        float: none;
-        margin: 0 auto;
-        transition: 0.4s ease;
-    }
-
-    .servicedetails {
-        width: 50%;
-        padding: 4% 0 0 0;
-        float: left;
-    }
-
-    .hovexp {
+    .service-category-inner {
+        height: auto;
         flex-direction: column;
         justify-content: center;
     }
 
-    .hovexp h2 {
-        font-family: 'Roboto Condensed', sans-serif;
-        font-weight: 700;
-        color: white;
-        margin: 3% 0;
-        font-size: 120%;
-        float: none;
+    .category-heading {
+        width: 90%;
+        padding-bottom: 5%;
+        text-align: center;
     }
 
-    .hovexp p {
-        font-family: 'Source Sans Pro', sans-serif;
-        color: white;
-        line-height: 1rem;
+    .category-heading h1 {
+        font-size: 45px;
+        line-height: 0.9;
+        text-align: left;
+    }
+
+    .category-details {
+        width: 90%;
         display: block;
     }
 
-    .sevicedetails {
-        padding-top: 10%;
-    }
-
-    .topspace {
-        /*height: 40%;*/
+    .category-description {
         width: 100%;
-        position: relative;
-        transition: 0.4s ease;
     }
 
+    .category-description p {
+        font-size: 12px;
+        line-height: 14px;
+    }
 
-    /* - services on hover - */
+    .category-sub-sections {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 
-    .hovexp:hover h1 {
+    .category-sub-section {
+        width: 48%;
+        margin-top: 2%;
+    }
+
+    .category-sub-heading {
+        font-size: 14px;
+    }
+
+    .category-sub-detail {
+        padding-top: 10px;
+    }
+
+    .category-sub-detail p {
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+}
+
+@media (min-width:1366px) {
+
+    .desktop-only {
+        display: block;
+    }
+
+    .services-main-container {
+        flex-direction: row;
+        height: 80vh;
+    }
+
+    .service-category {
+        height: 100%;
+        width: 33%;
+    }
+
+    .service-category-inner {
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .category-heading {
+        width: 90%;
+        padding-bottom: 5%;
+        text-align: center;
+    }
+
+    .category-heading h1 {
+        font-size: 4.5vw;
+        line-height: 0.9;
+    }
+
+    .category-details {
+        width: 90%;
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition: visibility 0s, opacity 0.35s ease;
+        -moz-transition: visibility 0s, opacity 0.35s ease;
+        -o-transition: visibility 0s, opacity 0.35s ease;
+        -ms-transition: visibility 0s, opacity 0.35s ease;
+        transition: visibility 0s, opacity 0.35s ease;
+    }
+
+    .service-category-inner:focus .category-heading,
+    .service-category-inner:hover .category-heading {
         text-align: left;
-        margin: 0;
     }
 
-    /*.hovexp:hover .topspace {
-        height: 30%
-    }*/
-    .hovexp:hover .expnd {
-        height: 40%
+    .service-category-inner:focus .category-details,
+    .service-category-inner:hover .category-details {
+        height: auto;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .category-description {
+        width: 100%;
+    }
+
+    .category-description p {
+        font-size: 15px;
+        line-height: 18px;
+    }
+
+    .category-sub-sections {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .category-sub-section {
+        width: 48%;
+        margin-top: 2%;
+    }
+
+    .category-sub-heading {
+        font-size: 16px;
+    }
+
+    .category-sub-detail {
+        padding-top: 10px;
+    }
+
+    .category-sub-detail p {
+        font-size: 14px;
+        line-height: 10px;
     }
 }
 
