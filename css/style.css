@@ -644,6 +644,14 @@ hr {
     background-image: url(../img/header_section/header_03_1920x1080.jpg);
 }
 
+#hero-section-4 {
+    background-image: url(../img/header_section/header_04_1920x1080.jpg);
+}
+
+#hero-section-5 {
+    background-image: url(../img/header_section/header_05_1920x1080.jpg);
+}
+
 .hero-section-inner {
     position: absolute;
     bottom: 3vh;
