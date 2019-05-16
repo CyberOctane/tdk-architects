@@ -25,9 +25,16 @@
     <link rel="stylesheet" href="../vendor/font-awesome/css/font-awesome.min.css" type="text/css">
 
     <!-- Google Fonts API -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i"
+    <link
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
+
+    <!-- Pannellum CSS -->
+    <link rel="stylesheet" href="https://cdn.pannellum.org/2.4/pannellum.css" />
+
+    <!-- Pannellum JavaScript -->
+    <script type="text/javascript" src="https://cdn.pannellum.org/2.4/pannellum.js"></script>
 
     <!-- Theme CSS -->
     <link rel="stylesheet" type="text/css" href="../css/style.css">
@@ -110,9 +117,35 @@
         <img src="../img/projects/ruhuna_hospital/3.jpg">
     </div>
 
+    <div id="panorama_01" class="panorama"></div>
+
+    <div id="panorama_02" class="panorama"></div>
+
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="../vendor/jquery/jquery.min.js"></script>
+
+    <script>
+        pannellum.viewer('panorama_01', {
+            "type": "equirectangular",
+            "panorama": "/img/projects/ruhuna_hospital/pana_01.jpg",
+            "default": {
+                "sceneFadeDuration": 1000,
+                "autoLoad": true,
+                "mouseZoom": false
+            }
+        });
+
+        pannellum.viewer('panorama_02', {
+            "type": "equirectangular",
+            "panorama": "/img/projects/ruhuna_hospital/pana_04.jpg",
+            "default": {
+                "sceneFadeDuration": 1000,
+                "autoLoad": true,
+                "mouseZoom": false
+            }
+        });
+    </script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
